@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GelasioSerif';
+  src: url('./../../fonts/gelasioSerif/Gelasio-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoSansSerif';
+  src: url('./../../fonts/robotoSansSerif/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}

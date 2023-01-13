@@ -1,5 +1,5 @@
-# ![](./src/pic/greenvir30.png)![](./src/pic/book.png) Books shop ![](./src/pic/glasses.png) ![](./src/pic/violetvir30.png)
-1. [Demo Week 1]()
+# ![](./src/assets/icon/readme-icon/greenvir30.png)![](./src/assets/icon/readme-icon/book.png) Books shop ![](./src/assets/icon/readme-icon/glasses.png) ![](./src/assets/icon/readme-icon/violetvir30.png)
+1. [Demo Week 1](https://DenViRus.github.io/Book-Shop/src/pages/bookShop/bookShop.html)
 ---
 ## Task
 The books shop owner asked you to create the online shop to buy book with delivery to user's home. He wants the user to be able to look through the books' catalog, see the description of a particular book, add a book to the bag, choose the appropriate date and address to deliver.
@@ -31,6 +31,6 @@ It's **recommended** to use [normalize.css](https://necolas.github.io/normalize.
 
 
 ### Examples of layout
-![Book catalog](./src/img/img.png)
-![Popup](./src/img/img_1.png)
+![Book catalog](./src/assets/img/readme-img/img.png)
+![Popup](./src/assets/img/readme-img/img_1.png)
 ---

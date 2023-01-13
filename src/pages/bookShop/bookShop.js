@@ -1,0 +1,1 @@
+import './../../assets/js/bookShop-js/bookShopApp.js';
