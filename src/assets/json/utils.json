@@ -1,0 +1,20 @@
+[{
+  "name": "bsLogo",
+  "src": "./../../assets/icon/bookShop-icon/bookShopLogo.png",
+  "alt": "book shop logo image"
+},
+{
+  "name": "read1",
+  "src": "./../../assets/icon/bookShop-icon/read1.png",
+  "alt": "reading goblin image"
+},
+{
+  "name": "read2",
+  "src": "./../../assets/icon/bookShop-icon/read2.png",
+  "alt": "reading goblin image"
+},
+{
+  "name": "read3",
+  "src": "./../../assets/icon/bookShop-icon/read3.png",
+  "alt": "reading goblin image"
+}]

@@ -10,6 +10,7 @@ html {
 * {
   font-style: normal;
   font-weight: 400;
+  color: rgb(0, 0, 0);
 }
 
 .hidden {
@@ -21,9 +22,16 @@ html {
   --paragStyle: Arial, "GelasioSerif", serif;
   --colorBlack: rgb(0, 0, 0);
   --colorWhite: rgb(255, 255, 255);
+  --colorGrey: rgb(128, 128, 128);
+  --colorGold: rgb(255, 215, 0);
   --colorSilver: rgb(192, 192, 192);
-  --rowWidth: 1400px;
 
+  --rowWidth: 1400px;
+  --bg: radial-gradient(100% 215.42% at 0% 0%, rgb(240, 137, 64) 0%,  rgb(126, 72, 34) 100%), rgb(17, 9, 3);
+  --bg2: linear-gradient(130deg, rgb(105, 80, 61) -17.38%, rgb(39, 28, 20) 78.4%), rgb(14, 7, 1);
+
+  --headerLogoWidth: 15%;
+  --headerContWidth: 70%;
 
 }
 
@@ -31,6 +39,7 @@ html {
   width: var(--rowWidth);
   margin-left: auto;
   margin-right: auto;
+  color: dark;
 }
 
 .heading {
