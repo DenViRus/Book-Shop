@@ -1,0 +1,142 @@
+.ctbx-head-box {
+  height: var(--boxHeadBoxHight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boxheadBG);
+  padding: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.ctbx-head {
+  width: var(--boxHeadWidth);
+  text-align: right;
+  color: var(--colorSilver);
+  font-size: var(--boxHeadFZ);
+  font-weight: 600;
+}
+
+.ctbx-head-img {
+  width: var(--boxImgWidth);
+  height: var(--boxImgHight);
+  background-size: 70% 85%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0.15rem solid var(--colorGold);
+  border-radius: 1rem;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.ctbx-head-img {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/empCartGold.png);
+}
+
+.cart-box {
+  width: var(--cartBoxWidth);
+  height: var(--cartBoxHight);
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 5.5rem;
+  position: sticky;
+  top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ctbx-card-field {
+  height: var(--ctbxCardFieldHeight);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colorLightGrey);
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+.empty-field::before {
+  content: 'Your cart is empty!';
+  font-size: var(--ctbxEmptyFieldFZ);
+  margin-top: 10rem;
+}
+
+.ctbx-total {
+  height: var(--ctbxBtnBoxHeight);
+  background-color: var(--boxheadBG);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  z-index: 2;
+}
+
+.ctbx-total-text {
+  color: var(--colorSilver);
+  font-size: var(--ctbxTotalTextFZ);
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.ctbx-total-price {
+  font-size: var(--ctbxTotalPriceFZ);
+  color: var(--colorGold);
+  margin-left: 1rem;
+}
+
+.ctbx-total-sign {
+  color: var(--colorGreen);
+  font-size: var(--ctbxTotalSignFZ);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.ctbx-btn-box {
+  width: 100%;
+  height: var(--ctbxBtnBoxHeight);
+  background-color: var(--boxheadBG);
+  padding: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.ctbx-order-btn {
+  width: 100%;
+  font-size: var(--ctbxOrderBtnFZ);
+  font-weight: 600;
+  color: var(--colorSilver);
+
+  background-color: var(--colorBlue);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/orderCartSilver.png);
+  background-size: 3.5rem 3rem;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+
+  padding: 1rem;
+  border: 0.25rem solid var(--colorSilver);
+  border-radius: 0.5rem;
+}
+
+.cart-box:hover .ctbx-card-field {
+  transition: background-color 0.3s linear;
+  background-color: var(--colorWhite);
+}
+
+.cart-box:hover .ctbx-btn-box {
+  transition: bottom 0.3s linear;
+  bottom: -5.5rem;
+}
+
+.ctbx-order-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/orderCartGold.png);
+  border-color: var(--colorGold);
+}

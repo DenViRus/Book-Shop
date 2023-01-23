@@ -2,7 +2,6 @@
 @import "./reset.css";
 @import "./fonts.css";
 
-
 html {
   font-size: 10px;
 }
@@ -23,15 +22,16 @@ html {
   --colorBlack: rgb(0, 0, 0);
   --colorWhite: rgb(255, 255, 255);
   --colorGrey: rgb(128, 128, 128);
+  --colorLightGrey: rgb(211, 211, 211);
   --colorGold: rgb(255, 215, 0);
   --colorSilver: rgb(192, 192, 192);
 
-  --rowWidth: 1400px;
-  --bg: radial-gradient(100% 215.42% at 0% 0%, rgb(240, 137, 64) 0%,  rgb(126, 72, 34) 100%), rgb(17, 9, 3);
-  --bg2: linear-gradient(130deg, rgb(105, 80, 61) -17.38%, rgb(39, 28, 20) 78.4%), rgb(14, 7, 1);
+  --colorBlue: rgb(0, 0, 255);
+  --colorGreen: rgb(0, 128, 0);
+  --colorRed: rgb(255, 0, 0);
 
-  --headerLogoWidth: 15%;
-  --headerContWidth: 70%;
+
+  --rowWidth: 1420px;
 
 }
 
@@ -39,7 +39,6 @@ html {
   width: var(--rowWidth);
   margin-left: auto;
   margin-right: auto;
-  color: dark;
 }
 
 .heading {

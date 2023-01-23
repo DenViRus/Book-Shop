@@ -1,29 +1,27 @@
 .header {
-  background: var(--bg2);
-  padding: 3rem 0;
+  background: var(--bgHead);
+  padding: 1rem 0;
 }
 
 .header-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .header-logo-box {
-  width: var(--headerLogoWidth);
+  width: var(--headLogoWidth);
 }
 
 .header-logo-img {
   width: 100%;
-
 }
 
 .header-cont-box {
-  width: var(--headerContWidth);
-
+  width: var(--headContWidth);
 }
 
 .header-nav-box {
-  width: 70%;
+  width: var(--headNavWidth);
   margin-right: 0;
   margin-left: auto;
 }
@@ -36,7 +34,7 @@
 .header-nav-link {
   position: relative;
   color: var(--colorSilver);
-  font-size: 2rem;
+  font-size: var(--headNavFZ);
   font-weight: 600;
 }
 
@@ -49,15 +47,16 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -.5rem;
+  bottom: -0.3rem;
   display: block;
-  height: .3rem;
+  height: 0.15rem;
   background-color: var(--colorGold);
-  border-radius: 10rem;
+  border-radius: 1rem;
 }
 
 .header-heading {
   color: var(--colorGold);
-  font-size: 5rem;
+  font-size: var(--headHeadFZ);
   font-weight: 600;
+  margin: 1rem 0;
 }

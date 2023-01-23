@@ -1,0 +1,72 @@
+:root {
+
+  --bgHead: linear-gradient(130deg, rgb(105, 80, 61) -17.38%, rgb(39, 28, 20) 78.4%), rgb(14, 7, 1);
+  --bgHead2: radial-gradient(100% 215.42% at 0% 0%, rgb(240, 137, 64) 0%, rgb(126, 72, 34) 100%), rgb(17, 9, 3);
+
+  --headLogoWidth: 10%;
+
+  --headContWidth: 70%;
+
+  --headNavWidth: 70%;
+  --headNavFZ: 1.5rem;
+
+  --headHeadFZ: 3rem;
+
+
+  --bgMain: rgb(230, 184, 115);
+
+  --cardBoxWidth: 70%;
+
+  --boxHeadBoxHight: 4.5rem;
+
+  --boxHeadWidth: 60%;
+  --boxheadBG: rgb(100, 65, 15);
+  --boxHeadFZ: 2rem;
+
+  --boxImgWidth: 5rem;
+  --boxImgHight: 3.5rem;
+
+  --cdbxCardWidth: 21rem;
+  --cdbxCardHeight: 40rem;
+
+  --cdbxCardHeadFZ: 1.7rem;
+
+  --cdbxCardParagFZ: 1.7rem;
+
+  --cdbxCardPriceFZ: 2.5rem;
+
+  --cdbxCardBtnBoxHight: 5rem;
+
+  --cdbxCardBtnHight: 4rem;
+
+  --cdbxCardShowBtnWidth: 12rem;
+
+  --cdbxCardAddBtnWidth: 7rem;
+
+  --cdbxCardBtnFZ: 1.5rem;
+
+
+  --cartBoxWidth: 25%;
+  --cartBoxHight: 71rem;
+
+  --ctbxCardFieldHeight: 60rem;
+
+  --ctbxEmptyFieldFZ: 3rem;
+
+  --ctbxBtnBoxHeight: 6.5rem;
+
+  --ctbxTotalTextFZ: 2rem;
+  --ctbxTotalPriceFZ: 3rem;
+  --ctbxTotalSignFZ: 2.5rem;
+
+  --ctbxOrderBtnFZ: 2rem;
+
+
+
+
+
+
+
+
+
+}

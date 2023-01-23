@@ -1,13 +1,11 @@
 export default class BSActions {
   constructor() {
-
     this.newEl = null;
     this.data = null;
   }
 
-  createElem(el, elClass, elAttr, cont = '') {
+  createElem(el, elAttr, cont = "") {
     const elem = document.createElement(el);
-    elem.className = elClass;
     for (const prop in elAttr) {
       if (Object.hasOwnProperty.call(elAttr, prop)) {
         const val = elAttr[prop];
@@ -23,22 +21,18 @@ export default class BSActions {
     parEl.append(el);
   }
 
-  getDataReq = async (url, name) => {
+  getDataReq = async (url, id) => {
     const resp = await fetch(url);
     if (resp.status >= 200 && resp.status < 300) {
       this.data = await resp.json();
-      if (name) {
-        return this.data.find((el) => el.name === name);
+      if (id) {
+        return this.data.find((el) => el.id === id);
       }
       return this.data;
     }
     console.log(`ERROR!!, ${response}, ${response.status}`);
     return false;
-  }
+  };
 
-
-
-  bsActionsControl() {
-
-  }
+  bsActionsControl() {}
 }
