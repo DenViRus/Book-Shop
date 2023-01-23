@@ -1,0 +1,8 @@
+.main {
+  background-color: var(--bgMain);
+  padding-top: 1rem;
+}
+
+.main-row {
+  display: flex;
+}

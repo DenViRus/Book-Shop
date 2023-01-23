@@ -1,0 +1,167 @@
+.card-box {
+  width: var(--cardBoxWidth);
+}
+
+.cdbx-head-box {
+  height: var(--boxHeadBoxHight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boxheadBG);
+  padding: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cdbx-head {
+  width: var(--boxHeadWidth);
+  text-align: right;
+  color: var(--colorSilver);
+  font-size: var(--boxHeadFZ);
+  font-weight: 600;
+}
+
+.cdbx-head-img {
+  width: var(--boxImgWidth);
+  height: var(--boxImgHight);
+  background-size: 70% 85%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0.15rem solid var(--colorGold);
+  border-radius: 1rem;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.cdbx-head-img {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/openBookGold.png);
+}
+
+.cdbx-card-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  margin: 1rem 0;
+}
+
+.cdbx-card {
+  position: relative;
+  width: var(--cdbxCardWidth);
+  height: var(--cdbxCardHeight);
+  padding: 0.5rem;
+  background-color: var(--boxheadBG);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cdbx-card-img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.cdbx-card-info-box {
+  margin-top: 1rem;
+  background-color: var(--boxheadBG);
+  z-index: 2;
+}
+
+.cdbx-card-head {
+  font-size: var(--cdbxCardHeadFZ);
+  color: var(--colorGold);
+  text-align: center;
+}
+
+.cdbx-card-parag {
+  font-size: var(--cdbxCardParagFZ);
+  color: var(--colorSilver);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.cdbx-card-price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--cdbxCardBtnBoxHight);
+  font-size: var(--cdbxCardPriceFZ);
+  background-color: var(--boxheadBG);
+  margin-top: auto;
+  z-index: 2;
+}
+
+.cdbx-card-price {
+  color: var(--colorGold);
+}
+
+.cdbx-card-sign {
+  font-weight: 600;
+  color: var(--colorGreen);
+  margin-left: 0.5rem;
+}
+
+.cdbx-card-btn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--cdbxCardBtnBoxHight);
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--boxheadBG);
+  border-radius: 0 0 1rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.cdbx-card-show-btn,
+.cdbx-card-add-btn {
+  font-size: var(--cdbxCardBtnFZ);
+  font-weight: 600;
+  height: var(--cdbxCardBtnHight);
+  color: var(--colorSilver);
+  text-align: left;
+  background-color: var(--colorBlue);
+  background-size: 2.3rem 2rem;
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+  border: 0.2rem solid var(--colorSilver);
+  border-radius: 0.3rem;
+}
+
+.cdbx-card-show-btn {
+  width: var(--cdbxCardShowBtnWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/magnifSilver.png);
+}
+
+.cdbx-card-add-btn {
+  width: var(--cdbxCardAddBtnWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartSilver.png);
+}
+
+.cdbx-card:hover {
+  transition: scale 0.3s linear;
+  scale: 1.01;
+}
+
+.cdbx-card:hover .cdbx-card-btn-box {
+  transition: bottom 0.3s linear;
+  bottom: -4rem;
+}
+
+.cdbx-card-show-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/magnifGold.png);
+  border-color: var(--colorGold);
+}
+
+.cdbx-card-add-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
+  border-color: var(--colorGold);
+}

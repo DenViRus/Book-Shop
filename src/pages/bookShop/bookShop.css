@@ -1,3 +1,6 @@
 @import "./../../assets/css/default-css/default.css";
 @import "./../../assets/css/bookShop-css/bsStyle.css";
 @import "./../../assets/css/bookShop-css/bsHeader.css";
+@import "./../../assets/css/bookShop-css/bsMain.css";
+@import "./../../assets/css/bookShop-css/bsCardBox.css";
+@import "./../../assets/css/bookShop-css/bsCartBox.css";
