@@ -1,6 +1,6 @@
 .main {
   background-color: var(--bgMain);
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .main-row {

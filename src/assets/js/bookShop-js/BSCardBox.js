@@ -1,6 +1,5 @@
 export default class BSCardBox {
-  constructor(box, utils, actions) {
-    this.box = box;
+  constructor(utils, actions) {
     this.utils = utils;
     this.actions = actions;
   }
@@ -11,7 +10,7 @@ export default class BSCardBox {
     const cardBox = this.actions.createElem("div", { class: "card-box", id: "cardBox" });
 
     const cdBxHeadBox = this.actions.createElem("div", { class: "cdbx-head-box" });
-    const cdBxHead = this.actions.createElem("h2", { class: "heading cdbx-head" }, 'Your Books');
+    const cdBxHead = this.actions.createElem("h2", { class: "heading cdbx-head" }, "Your Books");
     const cdBxHeadImg = this.actions.createElem("div", { class: "cdbx-head-img" });
 
     const cdBxCardField = this.actions.createElem("div", { class: "cdbx-card-field", id: "cdbxCardField" });
@@ -23,13 +22,13 @@ export default class BSCardBox {
       const cdBxCardImg = this.actions.createElem("img", { class: "cdbx-card-img", src: data.src250, alt: "book image" });
 
       const cdBxCardInfoBox = this.actions.createElem("div", { class: "cdbx-card-info-box" });
-      const cdBxCardHead = this.actions.createElem("h3", { class: "heading cdbx-card-head" }, data.title);
+      const cdBxCardHead = this.actions.createElem("h4", { class: "heading cdbx-card-head" }, data.title);
       const cdBxCardParag = this.actions.createElem("p", { class: "paragraph cdbx-card-parag" }, data.author);
 
       const cdBxCardPriceBox = this.actions.createElem("div", { class: "cdbx-card-price-box" });
 
       const cdBxCardPrice = this.actions.createElem("span", { class: "heading cdbx-card-price" }, data.price);
-      const cdBxCardSign = this.actions.createElem("span", { class: "heading cdbx-card-sign" }, '$');
+      const cdBxCardSign = this.actions.createElem("span", { class: "heading cdbx-card-sign" }, "$");
 
       const cdBxCardBtnBox = this.actions.createElem("div", { class: "cdbx-card-btn-box" });
 
@@ -43,7 +42,6 @@ export default class BSCardBox {
 
       this.actions.addElem(cdBxCardHead, cdBxCardInfoBox);
       this.actions.addElem(cdBxCardParag, cdBxCardInfoBox);
-
 
       this.actions.addElem(cdBxCardShowBtn, cdBxCardBtnBox);
       this.actions.addElem(cdBxCardAddBtn, cdBxCardBtnBox);
@@ -65,8 +63,5 @@ export default class BSCardBox {
     return cardBox;
   }
 
-
-  bsCardBoxControl() {
-
-  }
+  bsCardBoxControl() {}
 }

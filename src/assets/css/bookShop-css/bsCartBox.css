@@ -1,5 +1,18 @@
+.cart-box {
+  width: var(--cartBoxWidth);
+  height: var(--cartBoxHeight);
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 5rem;
+  margin-bottom: 5.5rem;
+  position: sticky;
+  top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .ctbx-head-box {
-  height: var(--boxHeadBoxHight);
+  height: var(--boxHeadBoxHeight);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,15 +23,15 @@
 
 .ctbx-head {
   width: var(--boxHeadWidth);
-  text-align: right;
   color: var(--colorSilver);
   font-size: var(--boxHeadFZ);
+  text-align: right;
   font-weight: 600;
 }
 
 .ctbx-head-img {
   width: var(--boxImgWidth);
-  height: var(--boxImgHight);
+  height: var(--boxImgHeight);
   background-size: 70% 85%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -32,18 +45,6 @@
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/empCartGold.png);
 }
 
-.cart-box {
-  width: var(--cartBoxWidth);
-  height: var(--cartBoxHight);
-  margin-left: auto;
-  margin-right: 0;
-  margin-top: 5.5rem;
-  position: sticky;
-  top: 5.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .ctbx-card-field {
   height: var(--ctbxCardFieldHeight);
   display: flex;
@@ -55,7 +56,7 @@
 }
 
 .empty-field::before {
-  content: 'Your cart is empty!';
+  content: "Your cart is empty!";
   font-size: var(--ctbxEmptyFieldFZ);
   margin-top: 10rem;
 }

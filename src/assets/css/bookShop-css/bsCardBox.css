@@ -3,7 +3,7 @@
 }
 
 .cdbx-head-box {
-  height: var(--boxHeadBoxHight);
+  height: var(--boxHeadBoxHeight);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,15 +14,15 @@
 
 .cdbx-head {
   width: var(--boxHeadWidth);
-  text-align: right;
   color: var(--colorSilver);
   font-size: var(--boxHeadFZ);
+  text-align: right;
   font-weight: 600;
 }
 
 .cdbx-head-img {
   width: var(--boxImgWidth);
-  height: var(--boxImgHight);
+  height: var(--boxImgHeight);
   background-size: 70% 85%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,7 +43,8 @@
   flex-wrap: wrap;
   column-gap: 5rem;
   row-gap: 5rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 
 .cdbx-card {
@@ -84,7 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--cdbxCardBtnBoxHight);
+  height: var(--cdbxCardBtnBoxHeight);
   font-size: var(--cdbxCardPriceFZ);
   background-color: var(--boxheadBG);
   margin-top: auto;
@@ -105,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--cdbxCardBtnBoxHight);
+  height: var(--cdbxCardBtnBoxHeight);
   width: 100%;
   padding: 0.5rem;
   background-color: var(--boxheadBG);
@@ -120,7 +121,7 @@
 .cdbx-card-add-btn {
   font-size: var(--cdbxCardBtnFZ);
   font-weight: 600;
-  height: var(--cdbxCardBtnHight);
+  height: var(--cdbxCardBtnHeight);
   color: var(--colorSilver);
   text-align: left;
   background-color: var(--colorBlue);

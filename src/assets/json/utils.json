@@ -4,6 +4,21 @@
   "alt": "book shop logo image"
 },
 {
+  "id": "readingGirl1",
+  "src": "./../../assets/icon/bookShop-icon/bookShop-header-icon/readingGirl1.png",
+  "alt": "reading girl image"
+},
+{
+  "id": "readingGirl2",
+  "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/readingGirl2.png",
+  "alt": "reading girl image"
+},
+{
+  "id": "pamLogo",
+  "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/pamLogo.png",
+  "alt": "logo image"
+},
+{
   "id": "read1",
   "src": "./../../assets/icon/bookShop-icon/read1.png",
   "alt": "reading goblin image"

@@ -1,5 +1,4 @@
 :root {
-
   --bgHead: linear-gradient(130deg, rgb(105, 80, 61) -17.38%, rgb(39, 28, 20) 78.4%), rgb(14, 7, 1);
   --bgHead2: radial-gradient(100% 215.42% at 0% 0%, rgb(240, 137, 64) 0%, rgb(126, 72, 34) 100%), rgb(17, 9, 3);
 
@@ -10,21 +9,22 @@
   --headNavWidth: 70%;
   --headNavFZ: 1.5rem;
 
-  --headHeadFZ: 3rem;
+  --headHeadFZ: 5rem;
 
+  --headImgWidth: 12.5rem;
 
   --bgMain: rgb(230, 184, 115);
 
   --cardBoxWidth: 70%;
 
-  --boxHeadBoxHight: 4.5rem;
+  --boxHeadBoxHeight: 4.5rem;
 
   --boxHeadWidth: 60%;
   --boxheadBG: rgb(100, 65, 15);
-  --boxHeadFZ: 2rem;
+  --boxHeadFZ: 3rem;
 
   --boxImgWidth: 5rem;
-  --boxImgHight: 3.5rem;
+  --boxImgHeight: 3.5rem;
 
   --cdbxCardWidth: 21rem;
   --cdbxCardHeight: 40rem;
@@ -35,9 +35,9 @@
 
   --cdbxCardPriceFZ: 2.5rem;
 
-  --cdbxCardBtnBoxHight: 5rem;
+  --cdbxCardBtnBoxHeight: 5rem;
 
-  --cdbxCardBtnHight: 4rem;
+  --cdbxCardBtnHeight: 4rem;
 
   --cdbxCardShowBtnWidth: 12rem;
 
@@ -45,11 +45,10 @@
 
   --cdbxCardBtnFZ: 1.5rem;
 
-
   --cartBoxWidth: 25%;
-  --cartBoxHight: 71rem;
+  --cartBoxHeight: 63rem;
 
-  --ctbxCardFieldHeight: 60rem;
+  --ctbxCardFieldHeight: 52rem;
 
   --ctbxEmptyFieldFZ: 3rem;
 
@@ -61,12 +60,19 @@
 
   --ctbxOrderBtnFZ: 2rem;
 
+  --footContHeadFZ: 2.5rem;
 
+  --footContLinkFZ: 2rem;
+  --footContLinkHeight: 3rem;
 
+  --footContLinkMailWidth: 24rem;
+  --footContLinkPhoneWidth: 15rem;
+  --footContLinkTelegramWidth: 15rem;
 
+  --footerImgWidth: 20rem;
 
+  --footerDevWidth: ;
 
-
-
-
+  --footDevLinkHubWidth: 12.5rem;
+  --footDevLinkLogoWidth: 15rem;
 }
