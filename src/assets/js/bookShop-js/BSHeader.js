@@ -1,23 +1,24 @@
 export default class BSHeader {
-  constructor(box, utils, actions) {
-    this.box = box;
-
+  constructor(utils, actions) {
     this.utils = utils;
     this.actions = actions;
   }
 
   async getHeader() {
+    const logoData = await this.utils.getUtil("bsLogo");
+    const headerImgData = await this.utils.getUtil("readingGirl1");
+
     const header = this.actions.createElem("header", { class: "header", id: "header" });
     const headerRow = this.actions.createElem("div", { class: "row header-row" });
+
     const headerLogoBox = this.actions.createElem("div", { class: "header-logo-box" });
     const headerContBox = this.actions.createElem("div", { class: "header-cont-box" });
+    const headerImgBox = this.actions.createElem("div", { class: "header-img-box" });
 
     const headerLogo = this.actions.createElem("a", { class: "header-logo", id: "headerLogo", href: "#header" });
     const headerLogoImgBox = this.actions.createElem("div", { class: "header-logo-img-box" });
     const headerNavBox = this.actions.createElem("div", { class: "header-nav-box" });
     const headerHeading = this.actions.createElem("h1", { class: "heading header-heading" }, "Read Your Book!");
-
-    const logoData = await this.utils.getUtil("bsLogo");
 
     const headerLogoImg = this.actions.createElem("img", { class: "header-logo-img", src: logoData.src, alt: logoData.alt });
 
@@ -36,6 +37,8 @@ export default class BSHeader {
       this.actions.addElem(headerNavItem, headerNavList);
     }
 
+    const headerImg = this.actions.createElem("img", { class: "header-img", src: headerImgData.src, alt: headerImgData.alt });
+
     this.actions.addElem(headerLogoImg, headerLogoImgBox);
     this.actions.addElem(headerLogoImgBox, headerLogo);
     this.actions.addElem(headerLogo, headerLogoBox);
@@ -46,15 +49,15 @@ export default class BSHeader {
 
     this.actions.addElem(headerHeading, headerContBox);
 
+    this.actions.addElem(headerImg, headerImgBox);
+
     this.actions.addElem(headerLogoBox, headerRow);
     this.actions.addElem(headerContBox, headerRow);
+    this.actions.addElem(headerImgBox, headerRow);
 
     this.actions.addElem(headerRow, header);
-
-    this.actions.addElem(header, this.box);
+    return header;
   }
 
-  bsHeaderControl() {
-    this.getHeader();
-  }
+  bsHeaderControl() {}
 }

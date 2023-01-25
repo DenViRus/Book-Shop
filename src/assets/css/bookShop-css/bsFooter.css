@@ -1,0 +1,112 @@
+.footer {
+  background: var(--bgHead);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.footer-cont-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-cont-heading {
+  font-size: var(--footContHeadFZ);
+  color: var(--colorSilver);
+  font-weight: 600;
+}
+
+.footer-cont-mail-link,
+.footer-cont-phone-link,
+.footer-cont-telegram-link,
+.footer-dev-hub-link {
+  font-size: var(--footContLinkFZ);
+  color: var(--colorSilver);
+  height: var(--footContLinkHeight);
+  text-align: right;
+  line-height: var(--footContLinkHeight);
+  margin-top: 1rem;
+  background-size: var(--footContLinkHeight) var(--footContLinkHeight);
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.footer-cont-mail-link {
+  width: var(--footContLinkMailWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/emailSilver.png);
+}
+
+.footer-cont-phone-link {
+  width: var(--footContLinkPhoneWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/phoneSilver.png);
+}
+
+.footer-cont-telegram-link {
+  width: var(--footContLinkTelegramWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/telegramSilver.png);
+}
+
+.footer-img-box {
+  width: var(--footerImgWidth);
+  position: absolute;
+  top: 2rem;
+  left: 23.5rem;
+}
+
+.footer-img {
+  width: 100%;
+}
+
+.footer-dev-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-dev-hub-link {
+  width: var(--footDevLinkHubWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/githubSilver.png);
+  margin-top: auto;
+}
+
+.footer-dev-logo-link {
+  width: var(--footDevLinkLogoWidth);
+  margin-top: 1rem;
+}
+
+.footer-dev-logo-img {
+  width: 100%;
+}
+
+.footer-cont-mail-link:hover,
+.footer-cont-phone-link:hover,
+.footer-cont-telegram-link:hover,
+.footer-dev-hub-link:hover {
+  color: var(--colorGold);
+  scale: 1.01;
+}
+
+.footer-cont-mail-link:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/emailGold.png);
+}
+
+.footer-cont-phone-link:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/phoneGold.png);
+}
+
+.footer-cont-telegram-link:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/telegramGold.png);
+}
+
+.footer-dev-hub-link:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-footer-icon/githubGold.png);
+}
+
+.footer-dev-logo-link:hover {
+  scale: 1.01;
+  box-shadow: 0rem 0.2rem 3rem 1rem rgb(192, 192, 192, 0.2);
+}

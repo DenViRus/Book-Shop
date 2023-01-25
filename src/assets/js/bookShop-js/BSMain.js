@@ -1,6 +1,5 @@
 export default class BSMain {
-  constructor(box, cardBox, cartBox, utils, actions) {
-    this.box = box;
+  constructor(cardBox, cartBox, utils, actions) {
     this.cardBox = cardBox;
     this.cartBox = cartBox;
 
@@ -20,10 +19,8 @@ export default class BSMain {
     this.actions.addElem(cartBox, mainRow);
 
     this.actions.addElem(mainRow, main);
-    this.actions.addElem(main, this.box);
+    return main;
   }
 
-  bsMainControl() {
-    this.getMain();
-  }
+  bsMainControl() {}
 }

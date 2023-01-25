@@ -6,6 +6,7 @@
 .header-row {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .header-logo-box {
@@ -58,5 +59,16 @@
   color: var(--colorGold);
   font-size: var(--headHeadFZ);
   font-weight: 600;
-  margin: 1rem 0;
+  margin-top: 5.2rem;
+}
+
+.header-img-box {
+  width: var(--headImgWidth);
+  position: absolute;
+  top: 2rem;
+  right: 26rem;
+}
+
+.header-img {
+  width: 100%;
 }
