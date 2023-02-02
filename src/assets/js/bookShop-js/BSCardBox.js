@@ -10,7 +10,7 @@ export default class BSCardBox {
     const cardBox = this.actions.createElem("div", { class: "card-box", id: "cardBox" });
 
     const cdBxHeadBox = this.actions.createElem("div", { class: "cdbx-head-box" });
-    const cdBxHead = this.actions.createElem("h2", { class: "heading cdbx-head" }, "Your Books");
+    const cdBxHead = this.actions.createElem("h2", { class: "heading cdbx-head" }, "Our Books");
     const cdBxHeadImg = this.actions.createElem("div", { class: "cdbx-head-img" });
 
     const cdBxCardField = this.actions.createElem("div", { class: "cdbx-card-field", id: "cdbxCardField" });

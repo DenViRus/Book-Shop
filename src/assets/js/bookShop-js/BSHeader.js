@@ -28,7 +28,7 @@ export default class BSHeader {
     const headerNavListItemData = [
       { cont: "About Us", id: "aboutUs", href: "#" },
       { cont: "Our Books", id: "ourBooks", href: "#main" },
-      { cont: "Contact Us", id: "contactUs", href: "#footer" },
+      { cont: "Our Contacts", id: "contactUs", href: "#footer" },
     ];
     for (const data of headerNavListItemData) {
       const headerNavItem = this.actions.createElem("li", { class: "header-nav-item" });

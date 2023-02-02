@@ -1,1 +1,1 @@
-import '../../assets/js/bookShop-js/bsApp.js';
+import "../../assets/js/bookShop-js/bsApp.js";

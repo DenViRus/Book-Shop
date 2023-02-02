@@ -1,0 +1,273 @@
+.orderForm-box {
+  width: var(--orderFormBoxWidth);
+}
+
+.orfm-head-box {
+  height: var(--boxHeadBoxHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boxheadBG);
+  padding: 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.orfm-head-btn {
+  width: var(--orfmHeadBtnWidth);
+  font-size: var(--orfmHeadBtnFZ);
+  color: var(--colorSilver);
+  background-color: var(--colorBlue);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/openBookSilver.png);
+  background-size: 2.5rem 2rem;
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+
+  font-weight: 600;
+
+  text-align: right;
+  padding: 0.3rem 0.6rem;
+  border: 0.1rem solid var(--colorSilver);
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.orfm-head {
+  width: var(--boxHeadWidth);
+  color: var(--colorSilver);
+  font-size: var(--boxHeadFZ);
+  text-align: right;
+  font-weight: 600;
+}
+
+.orfm-head-img {
+  width: var(--boxImgWidth);
+  height: var(--boxImgHeight);
+  background-size: 75% 85%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/deliveryGold.png);
+  border: 0.15rem solid var(--colorGold);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.orfm-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.orfm-box {
+  background-color: var(--boxheadBG);
+  width: 100%;
+  padding: 1rem;
+}
+
+.orfm-box:nth-child(n + 2) {
+  margin-top: 1rem;
+}
+
+.orfm-fld {
+  border: 0.2rem solid var(--colorSilver);
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.orfm-lgd {
+  font-size: var(--orfmLgdFZ);
+  color: var(--colorSilver);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.orfm-lbl {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.orfm-span {
+  font-size: var(--orfmSpanFZ);
+  color: var(--colorSilver);
+}
+
+.orfm-checkSign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0.3rem solid var(--colorSilver);
+  margin: 0 2rem;
+}
+
+.orfm-checkSign::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.orfm-persData-fld,
+.orfm-addrData-fld,
+.orfm-dateData-fld {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.orfm-payData-fld,
+.orfm-giftData-fld {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.orfm-persData-lbl,
+.orfm-addrData-lbl,
+.orfm-dateData-lbl {
+  flex-direction: column;
+  width: 45%;
+}
+
+.orfm-payData-lbl,
+.orfm-giftData-lbl {
+  align-items: center;
+}
+
+.orfm-persData-name-inp,
+.orfm-persData-surname-inp,
+.orfm-persData-phone-inp,
+.orfm-persData-emale-inp,
+.orfm-addrData-country-inp,
+.orfm-addrData-city-inp,
+.orfm-addrData-street-inp,
+.orfm-addrData-house-inp,
+.orfm-addrData-flat-inp,
+.orfm-dateData-date-inp {
+  border: 0.3rem solid var(--colorSilver);
+  background-color: var(--bgMain);
+  font-size: var(--orfmInpFZ);
+  color: var(--colorBlack);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+.orfm-payData-cash-inp,
+.orfm-payData-card-inp,
+.orfm-giftData-pack-inp,
+.orfm-giftData-post-inp,
+.orfm-giftData-disc-inp,
+.orfm-giftData-pen-inp {
+  clip: rect(1px 1px 1px 1px);
+  width: 1px;
+  height: 1px;
+}
+.orfm-payData-checkSign {
+  border-radius: 2rem;
+}
+
+.orfm-payData-checkSign::after {
+  border-radius: 1rem;
+}
+
+.orfm-giftData-checkSign {
+  border-radius: 0.5rem;
+}
+
+.orfm-giftData-checkSign::after {
+  border-right: 0.5rem solid var(--boxheadBG);
+  border-bottom: 0.5rem solid var(--boxheadBG);
+  transform: rotate(45deg) translate(-0.3rem, -0.3rem);
+}
+
+.orfm-head-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/openBookGold.png);
+}
+
+.orfm-lbl:hover > .orfm-span {
+  color: var(--colorGold);
+}
+
+.orfm-persData-lbl:hover > .orfm-inp,
+.orfm-addrData-lbl:hover > .orfm-inp,
+.orfm-dateData-lbl:hover > .orfm-inp {
+  border-color: var(--colorGold);
+}
+
+.orfm-persData-lbl:focus-within > .orfm-span,
+.orfm-addrData-lbl:focus-within > .orfm-span,
+.orfm-dateData-lbl:focus-within > .orfm-span {
+  color: var(--colorGold);
+}
+
+.orfm-payData-lbl:hover > .orfm-checkSign,
+.orfm-giftData-lbl:hover > .orfm-checkSign {
+  border-color: var(--colorGold);
+}
+
+.orfm-persData-name-inp:focus,
+.orfm-persData-surname-inp:focus,
+.orfm-persData-phone-inp:focus,
+.orfm-persData-emale-inp:focus,
+.orfm-addrData-country-inp:focus,
+.orfm-addrData-city-inp:focus,
+.orfm-addrData-street-inp:focus,
+.orfm-addrData-house-inp:focus,
+.orfm-addrData-flat-inp:focus,
+.orfm-dateData-date-inp:focus {
+  border-color: var(--colorGold);
+}
+
+.orfm-inp:checked + .orfm-checkSign,
+.orfm-giftData-pack-inp:checked + .orfm-checkSign::after,
+.orfm-giftData-post-inp:checked + .orfm-checkSign::after,
+.orfm-giftData-disc-inp:checked + .orfm-checkSign::after,
+.orfm-giftData-pen-inp:checked + .orfm-checkSign::after {
+  border-color: var(--colorGold);
+}
+
+.orfm-payData-cash-inp:checked + .orfm-checkSign::after,
+.orfm-payData-card-inp:checked + .orfm-checkSign::after {
+  background-color: var(--colorGold);
+}
+
+.orfm-payData-cash-inp:checked ~ .orfm-span,
+.orfm-payData-card-inp:checked ~ .orfm-span,
+.orfm-giftData-pack-inp:checked ~ .orfm-span,
+.orfm-giftData-post-inp:checked ~ .orfm-span,
+.orfm-giftData-disc-inp:checked ~ .orfm-span,
+.orfm-giftData-pen-inp:checked ~ .orfm-span {
+  color: var(--colorGold);
+}
+
+.orfm-btn-box {
+  text-align: center;
+}
+
+.orfm-sub-btn {
+  width: var(--orfmSubBtnWidth);
+  font-size: var(--orfmSubBtnFZ);
+  font-weight: 600;
+  color: var(--colorSilver);
+  background-color: var(--colorBlue);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/handsSilver.png);
+  background-size: 3.5rem 3.5rem;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border: 0.25rem solid var(--colorSilver);
+  border-radius: 1rem;
+}
+
+.orfm-sub-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/handsGold.png);
+  border-color: var(--colorGold);
+}

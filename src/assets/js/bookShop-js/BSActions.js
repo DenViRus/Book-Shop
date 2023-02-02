@@ -21,6 +21,14 @@ export default class BSActions {
     parEl.append(el);
   }
 
+  prepElem(el, parEl) {
+    parEl.prepend(el);
+  }
+
+  replElem(el1, el2) {
+    el2.replaceWith(el1);
+  }
+
   getDataReq = async (url, id) => {
     const resp = await fetch(url);
     if (resp.status >= 200 && resp.status < 300) {

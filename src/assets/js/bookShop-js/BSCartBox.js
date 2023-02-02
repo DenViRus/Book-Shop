@@ -12,7 +12,6 @@ export default class BSCartBox {
     const ctBxHeadImg = this.actions.createElem("div", { class: "ctbx-head-img" });
 
     const ctbxCardField = this.actions.createElem("div", { class: "ctbx-card-field empty-field", id: "ctbxCardField" });
-    // const ctbxEmpty = this.actions.createElem("div", { class: "ctbx-card-field", id: "ctbxCardField" }, 'Your cart is empty!');
 
     const ctBxTotal = this.actions.createElem("div", { class: "ctbx-total" });
     const ctBxTotaltext = this.actions.createElem("span", { class: "paragraph ctbx-total-text" }, "Total:");
