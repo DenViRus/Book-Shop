@@ -26,14 +26,11 @@
   background-size: 70% 85%;
   background-position: center center;
   background-repeat: no-repeat;
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/openBookGold.png);
   border: 0.15rem solid var(--colorGold);
   border-radius: 1rem;
-  margin-right: 0;
+  margin-right: 1rem;
   margin-left: auto;
-}
-
-.cdbx-head-img {
-  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/openBookGold.png);
 }
 
 .cdbx-card-field {

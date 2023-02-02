@@ -71,8 +71,21 @@
 
   --footerImgWidth: 20rem;
 
-  --footerDevWidth: ;
-
   --footDevLinkHubWidth: 12.5rem;
   --footDevLinkLogoWidth: 15rem;
+
+  --orderFormBoxWidth: 70%;
+
+  --orfmHeadBtnWidth: 14rem;
+  --orfmHeadBtnFZ: 1.5rem;
+
+  --orfmLgdFZ: 2.5rem;
+
+  --orfmSpanFZ: 2rem;
+
+  --orfmInpFZ: 1.7rem;
+
+  --orfmSubBtnWidth: 50%;
+
+  --orfmSubBtnFZ: 2rem;
 }
