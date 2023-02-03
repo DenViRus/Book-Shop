@@ -35,33 +35,24 @@ export default class BSCardBox {
       const cdBxCardShowBtn = this.actions.createElem("button", { class: "cdbx-card-show-btn", type: "button" }, "Show More");
       const cdBxCardAddBtn = this.actions.createElem("button", { class: "cdbx-card-add-btn", type: "button" }, "Add");
 
-      this.actions.addElem(cdBxCardImg, cdBxCardImgBox);
+      this.actions.addEl(cdBxCardImgBox, cdBxCardImg);
 
-      this.actions.addElem(cdBxCardPrice, cdBxCardPriceBox);
-      this.actions.addElem(cdBxCardSign, cdBxCardPriceBox);
+      this.actions.addEl(cdBxCardPriceBox, cdBxCardPrice, cdBxCardSign);
 
-      this.actions.addElem(cdBxCardHead, cdBxCardInfoBox);
-      this.actions.addElem(cdBxCardParag, cdBxCardInfoBox);
+      this.actions.addEl(cdBxCardInfoBox, cdBxCardHead, cdBxCardParag);
 
-      this.actions.addElem(cdBxCardShowBtn, cdBxCardBtnBox);
-      this.actions.addElem(cdBxCardAddBtn, cdBxCardBtnBox);
+      this.actions.addEl(cdBxCardBtnBox, cdBxCardShowBtn, cdBxCardAddBtn);
 
-      this.actions.addElem(cdBxCardImgBox, cdBxCard);
-      this.actions.addElem(cdBxCardInfoBox, cdBxCard);
-      this.actions.addElem(cdBxCardPriceBox, cdBxCard);
-      this.actions.addElem(cdBxCardBtnBox, cdBxCard);
+      this.actions.addEl(cdBxCard, cdBxCardImgBox, cdBxCardInfoBox, cdBxCardPriceBox, cdBxCardBtnBox);
 
-      this.actions.addElem(cdBxCard, cdBxCardField);
+      this.actions.addEl(cdBxCardField, cdBxCard);
     }
 
-    this.actions.addElem(cdBxHead, cdBxHeadBox);
-    this.actions.addElem(cdBxHeadImg, cdBxHeadBox);
+    this.actions.addEl(cdBxHeadBox, cdBxHead, cdBxHeadImg);
+    this.actions.addEl(cdBxHeadBox, cdBxHead, cdBxHeadImg);
 
-    this.actions.addElem(cdBxHeadBox, cardBox);
-    this.actions.addElem(cdBxCardField, cardBox);
+    this.actions.addEl(cardBox, cdBxHeadBox, cdBxCardField);
 
     return cardBox;
   }
-
-  bsCardBoxControl() {}
 }

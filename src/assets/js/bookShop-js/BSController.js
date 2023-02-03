@@ -20,9 +20,7 @@ export default class BSController {
     this.bsMain = await this.main.getMain();
     this.bsFooter = await this.footer.getfooter();
 
-    this.actions.addElem(this.bsHeader, this.box);
-    this.actions.addElem(this.bsMain, this.box);
-    this.actions.addElem(this.bsFooter, this.box);
+    this.actions.addEl(this.box, this.bsHeader, this.bsMain, this.bsFooter);
   }
 
   async bsControl() {

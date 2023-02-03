@@ -17,15 +17,15 @@ export default class BSActions {
     return this.newEl;
   }
 
-  addElem(el, parEl) {
-    parEl.append(el);
+  addEl(parEl, ...els) {
+    parEl.append(...els);
   }
 
-  prepElem(el, parEl) {
-    parEl.prepend(el);
+  prepEl(parEl, ...els) {
+    parEl.prepend(...els);
   }
 
-  replElem(el1, el2) {
+  replEl(el1, el2) {
     el2.replaceWith(el1);
   }
 
@@ -41,6 +41,4 @@ export default class BSActions {
     console.log(`ERROR!!, ${response}, ${response.status}`);
     return false;
   };
-
-  bsActionsControl() {}
 }

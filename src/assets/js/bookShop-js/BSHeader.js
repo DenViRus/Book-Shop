@@ -33,31 +33,27 @@ export default class BSHeader {
     for (const data of headerNavListItemData) {
       const headerNavItem = this.actions.createElem("li", { class: "header-nav-item" });
       const headerNavLink = this.actions.createElem("a", { class: "paragraph header-nav-link", id: data.id, href: data.href }, data.cont);
-      this.actions.addElem(headerNavLink, headerNavItem);
-      this.actions.addElem(headerNavItem, headerNavList);
+      this.actions.addEl(headerNavItem, headerNavLink);
+      this.actions.addEl(headerNavList, headerNavItem);
     }
 
     const headerImg = this.actions.createElem("img", { class: "header-img", src: headerImgData.src, alt: headerImgData.alt });
 
-    this.actions.addElem(headerLogoImg, headerLogoImgBox);
-    this.actions.addElem(headerLogoImgBox, headerLogo);
-    this.actions.addElem(headerLogo, headerLogoBox);
+    this.actions.addEl(headerLogoImgBox, headerLogoImg);
+    this.actions.addEl(headerLogo, headerLogoImgBox);
+    this.actions.addEl(headerLogoBox, headerLogo);
 
-    this.actions.addElem(headerNavList, headerNav);
-    this.actions.addElem(headerNav, headerNavBox);
-    this.actions.addElem(headerNavBox, headerContBox);
+    this.actions.addEl(headerNav, headerNavList);
+    this.actions.addEl(headerNavBox, headerNav);
+    this.actions.addEl(headerContBox, headerNavBox);
 
-    this.actions.addElem(headerHeading, headerContBox);
+    this.actions.addEl(headerContBox, headerHeading);
 
-    this.actions.addElem(headerImg, headerImgBox);
+    this.actions.addEl(headerImgBox, headerImg);
 
-    this.actions.addElem(headerLogoBox, headerRow);
-    this.actions.addElem(headerContBox, headerRow);
-    this.actions.addElem(headerImgBox, headerRow);
+    this.actions.addEl(headerRow, headerLogoBox, headerContBox, headerImgBox);
 
-    this.actions.addElem(headerRow, header);
+    this.actions.addEl(header, headerRow);
     return header;
   }
-
-  bsHeaderControl() {}
 }
