@@ -165,12 +165,11 @@ export default class BSOrderFormBox {
         const dataItem1 = this.actions.createElem(data[0].tagName, data[0].tagAttr, data[0].tagCont);
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
-        this.actions.addElem(dataItem2, dataItem1);
-        this.actions.addElem(dataItem3, dataItem1);
-        this.actions.addElem(dataItem1, orfmPersDataFld);
+        this.actions.addEl(dataItem1, dataItem2, dataItem3);
+        this.actions.addEl(orfmPersDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
-        this.actions.addElem(dataItem, orfmPersDataFld);
+        this.actions.addEl(orfmPersDataFld, dataItem);
       }
     }
 
@@ -355,12 +354,11 @@ export default class BSOrderFormBox {
         const dataItem1 = this.actions.createElem(data[0].tagName, data[0].tagAttr, data[0].tagCont);
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
-        this.actions.addElem(dataItem2, dataItem1);
-        this.actions.addElem(dataItem3, dataItem1);
-        this.actions.addElem(dataItem1, orfmAddrDataFld);
+        this.actions.addEl(dataItem1, dataItem2, dataItem3);
+        this.actions.addEl(orfmAddrDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
-        this.actions.addElem(dataItem, orfmAddrDataFld);
+        this.actions.addEl(orfmAddrDataFld, dataItem);
       }
     }
 
@@ -413,12 +411,11 @@ export default class BSOrderFormBox {
         const dataItem1 = this.actions.createElem(data[0].tagName, data[0].tagAttr, data[0].tagCont);
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
-        this.actions.addElem(dataItem2, dataItem1);
-        this.actions.addElem(dataItem3, dataItem1);
-        this.actions.addElem(dataItem1, orfmDateDataFld);
+        this.actions.addEl(dataItem1, dataItem2, dataItem3);
+        this.actions.addEl(orfmDateDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
-        this.actions.addElem(dataItem, orfmDateDataFld);
+        this.actions.addEl(orfmDateDataFld, dataItem);
       }
     }
 
@@ -515,13 +512,11 @@ export default class BSOrderFormBox {
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
         const dataItem4 = this.actions.createElem(data[3].tagName, data[3].tagAttr, data[3].tagCont);
-        this.actions.prepElem(dataItem2, dataItem1);
-        this.actions.prepElem(dataItem3, dataItem1);
-        this.actions.prepElem(dataItem4, dataItem1);
-        this.actions.addElem(dataItem1, orfmPayDataFld);
+        this.actions.prepEl(dataItem1, dataItem2, dataItem3, dataItem4);
+        this.actions.addEl(orfmPayDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
-        this.actions.addElem(dataItem, orfmPayDataFld);
+        this.actions.addEl(orfmPayDataFld, dataItem);
       }
     }
 
@@ -698,41 +693,28 @@ export default class BSOrderFormBox {
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
         const dataItem4 = this.actions.createElem(data[3].tagName, data[3].tagAttr, data[3].tagCont);
-        this.actions.prepElem(dataItem2, dataItem1);
-        this.actions.prepElem(dataItem3, dataItem1);
-        this.actions.prepElem(dataItem4, dataItem1);
-        this.actions.addElem(dataItem1, orfmGiftDataFld);
+        this.actions.prepEl(dataItem1, dataItem2, dataItem3, dataItem4);
+        this.actions.addEl(orfmGiftDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
-        this.actions.addElem(dataItem, orfmGiftDataFld);
+        this.actions.addEl(orfmGiftDataFld, dataItem);
       }
     }
 
-    this.actions.addElem(orfmHeadBtn, orfmHeadBox);
-    this.actions.addElem(orfmHead, orfmHeadBox);
-    orfmHeadBtn;
-    this.actions.addElem(orfmHeadImg, orfmHeadBox);
+    this.actions.addEl(orfmHeadBox, orfmHeadBtn, orfmHead, orfmHeadImg);
 
-    this.actions.addElem(orfmSubBtn, orfmBtnBox);
+    this.actions.addEl(orfmBtnBox, orfmSubBtn);
 
-    this.actions.addElem(orfmPersDataFld, orfmPersDataBox);
-    this.actions.addElem(orfmAddrDataFld, orfmAddrDataBox);
-    this.actions.addElem(orfmDateDataFld, orfmDateDataBox);
-    this.actions.addElem(orfmPayDataFld, orfmPayDataBox);
-    this.actions.addElem(orfmGiftDataFld, orfmGiftDataBox);
+    this.actions.addEl(orfmPersDataBox, orfmPersDataFld);
+    this.actions.addEl(orfmAddrDataBox, orfmAddrDataFld);
+    this.actions.addEl(orfmDateDataBox, orfmDateDataFld);
+    this.actions.addEl(orfmPayDataBox, orfmPayDataFld);
+    this.actions.addEl(orfmGiftDataBox, orfmGiftDataFld);
 
-    this.actions.addElem(orfmPersDataBox, orfmForm);
-    this.actions.addElem(orfmAddrDataBox, orfmForm);
-    this.actions.addElem(orfmDateDataBox, orfmForm);
-    this.actions.addElem(orfmPayDataBox, orfmForm);
-    this.actions.addElem(orfmGiftDataBox, orfmForm);
-    this.actions.addElem(orfmBtnBox, orfmForm);
+    this.actions.addEl(orfmForm, orfmPersDataBox, orfmAddrDataBox, orfmDateDataBox, orfmPayDataBox, orfmGiftDataBox, orfmBtnBox);
 
-    this.actions.addElem(orfmHeadBox, orderFormBox);
-    this.actions.addElem(orfmForm, orderFormBox);
+    this.actions.addEl(orderFormBox, orfmHeadBox, orfmForm);
 
     return orderFormBox;
   }
-
-  bsOrderFormBoxControl() {}
 }

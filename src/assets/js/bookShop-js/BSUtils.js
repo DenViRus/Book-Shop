@@ -19,6 +19,4 @@ export default class BSUtils {
   async getUtil(id) {
     return (this.util = await this.actions.getDataReq(this.utilsUrl, id));
   }
-
-  bsUtilsControl() {}
 }

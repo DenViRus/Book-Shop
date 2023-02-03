@@ -22,22 +22,14 @@ export default class BSCartBox {
 
     const ctBxOrderBtn = this.actions.createElem("button", { class: "ctbx-order-btn", type: "button", id: "ctBxOrderBtn" }, "Confirm Order");
 
-    this.actions.addElem(ctBxHead, ctBxHeadBox);
-    this.actions.addElem(ctBxHeadImg, ctBxHeadBox);
+    this.actions.addEl(ctBxHeadBox, ctBxHead, ctBxHeadImg);
 
-    this.actions.addElem(ctBxTotaltext, ctBxTotal);
-    this.actions.addElem(ctBxTotalprice, ctBxTotal);
-    this.actions.addElem(ctBxTotalSign, ctBxTotal);
+    this.actions.addEl(ctBxTotal, ctBxTotaltext, ctBxTotalprice, ctBxTotalSign);
 
-    this.actions.addElem(ctBxOrderBtn, ctBxBtnBox);
+    this.actions.addEl(ctBxBtnBox, ctBxOrderBtn);
 
-    this.actions.addElem(ctBxHeadBox, cartBox);
-    this.actions.addElem(ctbxCardField, cartBox);
-    this.actions.addElem(ctBxTotal, cartBox);
-    this.actions.addElem(ctBxBtnBox, cartBox);
+    this.actions.addEl(cartBox, ctBxHeadBox, ctbxCardField, ctBxTotal, ctBxBtnBox);
 
     return cartBox;
   }
-
-  bsCartBoxControl() {}
 }

@@ -24,34 +24,27 @@ export default class BSFooter {
     ];
 
     const footerImg = this.actions.createElem("img", { class: "footer-img", src: footerImgData.src, alt: footerImgData.alt });
-
     const footerDevHubtLink = this.actions.createElem("a", { class: "paragraph footer-dev-hub-link", id: "footerDevHubLink", href: "https://github.com/DenViRus", target: "_blank" }, "DenViRus");
-
     const footerDevLogoLink = this.actions.createElem("a", { class: "footer-dev-logo-link", id: "footerDevLogoLink", href: "https://github.com/rolling-scopes-school/js-fe-course-en/tree/main/UpSkillMe", target: "_blank" });
-
     const footerDevLogoImg = this.actions.createElem("img", { class: "footer-dev-logo-img", src: pamLogoData.src, alt: pamLogoData.alt });
 
-    this.actions.addElem(footerContHeading, footerContBox);
+    this.actions.addEl(footerContBox, footerContHeading);
+
     for (const data of footerContLinkData) {
       const footerContLink = this.actions.createElem("a", { class: data.class, id: data.id, href: data.href, target: "_blank" }, data.cont);
-      this.actions.addElem(footerContLink, footerContBox);
+      this.actions.addEl(footerContBox, footerContLink);
     }
 
-    this.actions.addElem(footerImg, footerImgBox);
+    this.actions.addEl(footerImgBox, footerImg);
 
-    this.actions.addElem(footerDevLogoImg, footerDevLogoLink);
+    this.actions.addEl(footerDevLogoLink, footerDevLogoImg);
 
-    this.actions.addElem(footerDevHubtLink, footerDevBox);
-    this.actions.addElem(footerDevLogoLink, footerDevBox);
+    this.actions.addEl(footerDevBox, footerDevHubtLink, footerDevLogoLink);
 
-    this.actions.addElem(footerContBox, footerRow);
-    this.actions.addElem(footerImgBox, footerRow);
-    this.actions.addElem(footerDevBox, footerRow);
+    this.actions.addEl(footerRow, footerContBox, footerImgBox, footerDevBox);
 
-    this.actions.addElem(footerRow, footer);
+    this.actions.addEl(footer, footerRow);
 
     return footer;
   }
-
-  bsFooterControl() {}
 }
