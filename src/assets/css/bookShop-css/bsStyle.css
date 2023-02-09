@@ -88,4 +88,24 @@
   --orfmSubBtnWidth: 50%;
 
   --orfmSubBtnFZ: 2rem;
+
+  --popupBoxWidth: 75rem;
+
+  --popupImgBoxWidth: 30rem;
+
+  --popupContBoxWidth: 58%;
+
+  --popupClsBtnWidth: 3.5rem;
+
+  --popupHeadFZ: 2.5rem;
+
+  --popupParagAuthFZ: 2rem;
+
+  --popupParagDescWidth: 95%;
+  --popupParagDescFZ: 2rem;
+
+  --popupActTextFZ: 3rem;
+
+  --popupAddBtnWidth: 9rem;
+  --popupAddBtnFZ: 2rem;
 }

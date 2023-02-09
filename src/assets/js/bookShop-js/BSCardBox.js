@@ -4,9 +4,7 @@ export default class BSCardBox {
     this.actions = actions;
   }
 
-  async getCardBox() {
-    const cardData = await this.utils.getBooks();
-
+  getCardBox(cardData) {
     const cardBox = this.actions.createElem("div", { class: "card-box", id: "cardBox" });
 
     const cdBxHeadBox = this.actions.createElem("div", { class: "cdbx-head-box" });

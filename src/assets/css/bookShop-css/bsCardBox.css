@@ -150,16 +150,17 @@
   bottom: -4rem;
 }
 
-.cdbx-card-show-btn:hover {
-  color: var(--colorGold);
-  background-color: var(--colorGreen);
-  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/magnifGold.png);
-  border-color: var(--colorGold);
-}
-
+.cdbx-card-show-btn:hover,
 .cdbx-card-add-btn:hover {
   color: var(--colorGold);
   background-color: var(--colorGreen);
-  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
   border-color: var(--colorGold);
+}
+
+.cdbx-card-show-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/magnifGold.png);
+}
+
+.cdbx-card-add-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
 }

@@ -41,4 +41,8 @@ export default class BSActions {
     console.log(`ERROR!!, ${response}, ${response.status}`);
     return false;
   };
+
+  getElbyID(arr, id) {
+    return arr.find((el) => el.id === id);
+  }
 }

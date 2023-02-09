@@ -9,14 +9,14 @@ export default class BSUtils {
     return (this.utils = await this.actions.getDataReq(this.utilsUrl));
   }
 
-  async getBooks() {
-    return (this.books = [...(await this.actions.getDataReq(this.booksUrl))].map((item) => {
-      item["id"] = item.title.replace(/\W\D/g, "").replace(/(.)\1+/g, "$1");
-      return item;
-    }));
-  }
-
   async getUtil(id) {
     return (this.util = await this.actions.getDataReq(this.utilsUrl, id));
+  }
+
+  async getBooks() {
+    return (this.books = [...(await this.actions.getDataReq(this.booksUrl))].map((item) => {
+      item["id"] = item.title.replace(/\W/g, "").replace(/(.)\1+/g, "$1");
+      return item;
+    }));
   }
 }
