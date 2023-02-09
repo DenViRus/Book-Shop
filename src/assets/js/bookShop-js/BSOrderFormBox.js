@@ -512,7 +512,7 @@ export default class BSOrderFormBox {
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
         const dataItem4 = this.actions.createElem(data[3].tagName, data[3].tagAttr, data[3].tagCont);
-        this.actions.prepEl(dataItem1, dataItem2, dataItem3, dataItem4);
+        this.actions.addEl(dataItem1, dataItem4, dataItem3, dataItem2);
         this.actions.addEl(orfmPayDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
@@ -693,7 +693,7 @@ export default class BSOrderFormBox {
         const dataItem2 = this.actions.createElem(data[1].tagName, data[1].tagAttr, data[1].tagCont);
         const dataItem3 = this.actions.createElem(data[2].tagName, data[2].tagAttr, data[2].tagCont);
         const dataItem4 = this.actions.createElem(data[3].tagName, data[3].tagAttr, data[3].tagCont);
-        this.actions.prepEl(dataItem1, dataItem2, dataItem3, dataItem4);
+        this.actions.addEl(dataItem1, dataItem4, dataItem3, dataItem2);
         this.actions.addEl(orfmGiftDataFld, dataItem1);
       } else {
         const dataItem = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);

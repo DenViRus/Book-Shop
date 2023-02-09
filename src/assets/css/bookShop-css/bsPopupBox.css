@@ -1,0 +1,133 @@
+.popup-box {
+  width: var(--popupBoxWidth);
+  background-color: var(--boxheadBG);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 0.3rem solid var(--colorSilver);
+  border-radius: 1rem;
+
+  position: fixed;
+  z-index: 3;
+
+  transform: translate(15%, 20%);
+}
+
+.popup-img-box {
+  width: var(--popupImgBoxWidth);
+  margin: auto 0;
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.popup-cont-box {
+  width: var(--popupContBoxWidth);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-cls-btn {
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+
+  width: var(--popupClsBtnWidth);
+  height: var(--popupClsBtnWidth);
+
+  background-size: 2.5rem 2.5rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: var(--colorBlue);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/crossSilver.png);
+  border: 0.3rem solid var(--colorSilver);
+  border-radius: 2rem;
+}
+
+.popup-info-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-head {
+  text-align: center;
+  font-size: var(--popupHeadFZ);
+  color: var(--colorGold);
+}
+
+.popup-parag-auth {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: var(--popupParagAuthFZ);
+  color: var(--colorSilver);
+}
+
+.popup-parag-desc {
+  margin-top: 0.5rem;
+  width: var(--popupParagDescWidth);
+  color: var(--colorBlack);
+  background-color: var(--colorLightGrey);
+  font-size: var(--popupParagDescFZ);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.popup-act-box {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.popup-price {
+  font-size: var(--popupActTextFZ);
+  color: var(--colorGold);
+  margin-left: auto;
+}
+
+.popup-sign {
+  font-size: var(--popupActTextFZ);
+  font-weight: 600;
+  color: var(--colorGreen);
+  margin-left: 0.5rem;
+}
+
+.popup-add-btn {
+  width: var(--popupAddBtnWidth);
+  font-size: var(--popupAddBtnFZ);
+  font-weight: 600;
+  text-align: left;
+  color: var(--colorSilver);
+  background-color: var(--colorBlue);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartSilver.png);
+  background-size: 3rem 2.5rem;
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+
+  padding: 0.5rem;
+  border: 0.2rem solid var(--colorSilver);
+  border-radius: 0.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-cls-btn:hover {
+  border-color: var(--colorGold);
+  background-color: var(--colorRed);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/crossGold.png);
+}
+
+.popup-add-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
+  border-color: var(--colorGold);
+}
