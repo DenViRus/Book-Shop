@@ -1,35 +1,37 @@
-[{
-  "id": "bsLogo",
-  "src": "./../../assets/icon/bookShop-icon/bookShop-header-icon/bookShopLogo.png",
-  "alt": "book shop logo image"
-},
-{
-  "id": "readingGirl1",
-  "src": "./../../assets/icon/bookShop-icon/bookShop-header-icon/readingGirl1.png",
-  "alt": "reading girl image"
-},
-{
-  "id": "readingGirl2",
-  "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/readingGirl2.png",
-  "alt": "reading girl image"
-},
-{
-  "id": "pamLogo",
-  "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/pamLogo.png",
-  "alt": "logo image"
-},
-{
-  "id": "read1",
-  "src": "./../../assets/icon/bookShop-icon/read1.png",
-  "alt": "reading goblin image"
-},
-{
-  "id": "read2",
-  "src": "./../../assets/icon/bookShop-icon/read2.png",
-  "alt": "reading goblin image"
-},
-{
-  "id": "read3",
-  "src": "./../../assets/icon/bookShop-icon/read3.png",
-  "alt": "reading goblin image"
-}]
+[
+  {
+    "id": "bsLogo",
+    "src": "./../../assets/icon/bookShop-icon/bookShop-header-icon/bookShopLogo.png",
+    "alt": "book shop logo image"
+  },
+  {
+    "id": "readingGirl1",
+    "src": "./../../assets/icon/bookShop-icon/bookShop-header-icon/readingGirl1.png",
+    "alt": "reading girl image"
+  },
+  {
+    "id": "readingGirl2",
+    "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/readingGirl2.png",
+    "alt": "reading girl image"
+  },
+  {
+    "id": "pamLogo",
+    "src": "./../../assets/icon/bookShop-icon/bookShop-footer-icon/pamLogo.png",
+    "alt": "logo image"
+  },
+  {
+    "id": "read1",
+    "src": "./../../assets/icon/bookShop-icon/read1.png",
+    "alt": "reading goblin image"
+  },
+  {
+    "id": "read2",
+    "src": "./../../assets/icon/bookShop-icon/read2.png",
+    "alt": "reading goblin image"
+  },
+  {
+    "id": "read3",
+    "src": "./../../assets/icon/bookShop-icon/read3.png",
+    "alt": "reading goblin image"
+  }
+]

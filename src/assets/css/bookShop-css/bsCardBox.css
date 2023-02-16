@@ -122,7 +122,7 @@
   color: var(--colorSilver);
   text-align: left;
   background-color: var(--colorBlue);
-  background-size: 2.3rem 2rem;
+  background-size: 2.5rem 2rem;
   background-position: 90% 50%;
   background-repeat: no-repeat;
   padding: 0.5rem;
@@ -163,4 +163,10 @@
 
 .cdbx-card-add-btn:hover {
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
+}
+
+.cdbx-card-add-btn:disabled {
+  background: var(--colorGrey);
+  color: var(--colorGrey);
+  border-color: var(--colorBlack);
 }

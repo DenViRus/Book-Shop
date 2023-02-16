@@ -12,10 +12,6 @@ html {
   color: rgb(0, 0, 0);
 }
 
-.hidden {
-  display: none;
-}
-
 :root {
   --headStyle: Georgia, "RobotoSansSerif", sans-serif;
   --paragStyle: Arial, "GelasioSerif", serif;

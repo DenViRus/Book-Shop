@@ -16,6 +16,7 @@ export default class BSUtils {
   async getBooks() {
     return (this.books = [...(await this.actions.getDataReq(this.booksUrl))].map((item) => {
       item["id"] = item.title.replace(/\W/g, "").replace(/(.)\1+/g, "$1");
+      item["count"] = 1;
       return item;
     }));
   }

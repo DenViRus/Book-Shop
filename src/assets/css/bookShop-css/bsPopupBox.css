@@ -131,3 +131,9 @@
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/addCartGold.png);
   border-color: var(--colorGold);
 }
+
+.popup-add-btn:disabled {
+  background: var(--colorGrey);
+  color: var(--colorGrey);
+  border-color: var(--colorBlack);
+}

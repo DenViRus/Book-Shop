@@ -139,3 +139,172 @@
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/orderCartGold.png);
   border-color: var(--colorGold);
 }
+
+/* cartBox card start*/
+
+.ctbx-card {
+  width: var(--ctbxCardWidth);
+  background-color: var(--boxheadBG);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  position: relative;
+  margin-bottom: 4.5rem;
+}
+
+.ctbx-card-cont-box {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--boxheadBG);
+  z-index: 2;
+}
+
+.ctbx-card-img-box {
+  width: var(--ctbxCardImgBoxWidth);
+  margin: auto 0;
+}
+
+.ctbx-card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.ctbx-card-info-box {
+  width: var(--ctbxCardInfoBoxWidth);
+}
+
+.ctbx-card-head {
+  font-size: var(--ctbxCardHeadFZ);
+  color: var(--colorGold);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ctbx-card-parag {
+  font-size: var(--ctbxCardParagFZ);
+  color: var(--colorSilver);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ctbx-card-stat-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.ctbx-card-count {
+  color: var(--colorGold);
+  font-size: var(--ctbxCardStatTextFZ);
+}
+
+.ctbx-card-x {
+  color: var(--colorWhite);
+  font-size: var(--ctbxCardStatXFZ);
+  margin: 0 1rem;
+}
+
+.ctbx-card-sum {
+  color: var(--colorGold);
+  font-size: var(--ctbxCardStatTextFZ);
+}
+
+.ctbx-card-sign {
+  color: var(--colorGreen);
+  font-size: var(--ctbxCardStatTextFZ);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.ctbx-card-act-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  background-color: var(--boxheadBG);
+
+  width: 100%;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.ctbx-card-minus-btn,
+.ctbx-card-plus-btn,
+.ctbx-card-remove-btn {
+  height: var(--ctbxCardBtnWidth);
+  background-repeat: no-repeat;
+  background-color: var(--colorBlue);
+  border: 0.2rem solid var(--colorSilver);
+  border-radius: 2rem;
+}
+
+.ctbx-card-minus-btn,
+.ctbx-card-plus-btn {
+  background-size: 2.3rem 2.3rem;
+  background-position: 50% 50%;
+}
+
+.ctbx-card-minus-btn {
+  width: var(--ctbxCardBtnWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/minusSilver.png);
+  margin-left: 0.5rem;
+}
+
+.ctbx-card-plus-btn {
+  width: var(--ctbxCardBtnWidth);
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/plusSilver.png);
+  margin: 0 1rem;
+}
+
+.ctbx-card-remove-btn {
+  width: var(--ctbxCardRemoveBtnWidth);
+  font-size: var(--ctbxCardRemoveBtnFZ);
+  color: var(--colorSilver);
+  font-weight: 600;
+
+  background-size: 2.5rem 2rem;
+  background-position: 90% 50%;
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/remCartSilver.png);
+
+  text-align: left;
+  padding-left: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+.ctbx-card:hover .ctbx-card-act-box {
+  transition: bottom 0.3s linear;
+  bottom: -4rem;
+}
+
+.ctbx-card-minus-btn:hover,
+.ctbx-card-plus-btn:hover,
+.ctbx-card-remove-btn:hover {
+  border-color: var(--colorGold);
+}
+
+.ctbx-card-minus-btn:hover,
+.ctbx-card-remove-btn:hover {
+  background-color: var(--colorRed);
+}
+
+.ctbx-card-minus-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/minusGold.png);
+}
+
+.ctbx-card-plus-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/plusGold.png);
+  background-color: var(--colorGreen);
+}
+
+.ctbx-card-remove-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/remCartGold.png);
+}
+
+.hidden {
+  display: none;
+}
