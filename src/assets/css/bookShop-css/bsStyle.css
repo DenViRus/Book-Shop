@@ -108,4 +108,21 @@
 
   --popupAddBtnWidth: 9rem;
   --popupAddBtnFZ: 2rem;
+
+  --ctbxCardWidth: 100%;
+
+  --ctbxCardImgBoxWidth: 10rem;
+
+  --ctbxCardInfoBoxWidth: 67%;
+
+  --ctbxCardHeadFZ: 1.7rem;
+
+  --ctbxCardParagFZ: 1.7rem;
+
+  --ctbxCardStatTextFZ: 2.5rem;
+  --ctbxCardStatXFZ: 1.7rem;
+
+  --ctbxCardBtnWidth: 3.5rem;
+  --ctbxCardRemoveBtnWidth: 10rem;
+  --ctbxCardRemoveBtnFZ: 1.5rem;
 }

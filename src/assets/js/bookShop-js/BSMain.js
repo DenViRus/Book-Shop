@@ -10,10 +10,21 @@ export default class BSMain {
 
     this.cardData = null;
 
+    this.cartData = null;
+    this.cartCardData = null;
+
     this.popupData = null;
 
     this.cdbx = null;
+    this.cdbxfld = null;
+    this.cdbxCard = null;
+
     this.ctbx = null;
+    this.ctbxfld = null;
+    this.ctbxttlprs = null;
+    this.ctbxbtnbx = null;
+    this.ctbxCard = null;
+
     this.orfmbx = null;
 
     this.pppbx = null;
@@ -21,9 +32,17 @@ export default class BSMain {
 
   async getMain() {
     this.cardData = await this.utils.getBooks();
+    this.cartData = [];
 
     this.cdbx = this.cardBox.getCardBox(this.cardData);
+    this.cdbxfld = this.cdbx.querySelector(".cdbx-card-field");
+
     this.ctbx = this.cartBox.getCartBox();
+    this.ctbxfld = this.ctbx.querySelector(".ctbx-card-field");
+    this.ctbxttlprs = this.ctbx.querySelector(".ctbx-total-price");
+    this.ctbxbtnbx = this.ctbx.querySelector(".ctbx-btn-box");
+    this.cartBox.checkCart(this.cartData, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+
     this.orfmbx = this.orderFormBox.getOrderFormBox();
 
     const main = this.actions.createElem("main", { class: "main", id: "main" });
@@ -32,12 +51,6 @@ export default class BSMain {
     this.actions.addEl(mainRow, this.cdbx, this.ctbx);
 
     this.actions.addEl(main, mainRow);
-
-    ////////////////////////////////////////////
-    // const expPopup = this.popupBox.getPopupBox(this.cardData[5]);
-    // this.actions.prepEl(this.cdbx, expPopup);
-
-    //////////////////////////////////////////////
 
     return main;
   }
@@ -48,18 +61,20 @@ export default class BSMain {
 
       if (this.target.closest(".cdbx-card-show-btn")) {
         if (this.cdbx.contains(this.pppbx)) {
-          const newPopupData = this.actions.getElbyID(this.cardData, this.target.closest(".cdbx-card").id);
+          const newPopupData = this.actions.getElByID(this.cardData, this.target.closest(".cdbx-card").id);
           if (this.popupData.id === newPopupData.id) {
             return;
           } else {
-            const newPppbx = this.popupBox.getPopupBox(newPopupData);
+            const inCart = this.actions.checkInkludeByID(this.cartData, newPopupData.id);
+            const newPppbx = this.popupBox.getPopupBox(newPopupData, inCart);
             this.actions.replEl(newPppbx, this.pppbx);
             this.popupData = newPopupData;
             this.pppbx = newPppbx;
           }
         } else {
-          this.popupData = this.actions.getElbyID(this.cardData, this.target.closest(".cdbx-card").id);
-          this.pppbx = this.popupBox.getPopupBox(this.popupData);
+          this.popupData = this.actions.getElByID(this.cardData, this.target.closest(".cdbx-card").id);
+          const inCart = this.actions.checkInkludeByID(this.cartData, this.popupData.id);
+          this.pppbx = this.popupBox.getPopupBox(this.popupData, inCart);
           this.actions.prepEl(this.cdbx, this.pppbx);
         }
       }
@@ -69,11 +84,48 @@ export default class BSMain {
         this.popupData = null;
         this.pppbx = null;
       }
+
+      if (this.target.closest(".popup-add-btn")) {
+        this.cartBox.addCartCard(this.target, this.popupData, this.cartData, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+        this.cardBox.checkCardBtn(this.cartCardData, this.cartData, this.cdbxfld);
+      }
+
+      if (this.target.closest(".cdbx-card-add-btn")) {
+        this.cartCardData = this.actions.getElByID(this.cardData, this.target.closest(".cdbx-card").id);
+
+        this.cartBox.addCartCard(this.target, this.cartCardData, this.cartData, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+        this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
+      }
     };
     this.cdbx.addEventListener("click", cardListener1);
 
     const cartListener1 = (event) => {
       this.target = event.target;
+
+      if (this.target.closest(".ctbx-card-remove-btn")) {
+        this.ctbxCard = this.target.closest(".ctbx-card");
+        this.cartCardData = this.actions.getElByID(this.cardData, this.ctbxCard.dataset.ctbxcardid);
+
+        this.cartBox.remCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+        this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
+        this.cardBox.checkCardBtn(this.cartCardData, this.cartData, this.cdbxfld);
+      }
+
+      if (this.target.closest(".ctbx-card-plus-btn")) {
+        this.ctbxCard = this.target.closest(".ctbx-card");
+        this.cartCardData = this.actions.getElByID(this.cardData, this.ctbxCard.dataset.ctbxcardid);
+
+        this.cartBox.plusCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+      }
+
+      if (this.target.closest(".ctbx-card-minus-btn")) {
+        this.ctbxCard = this.target.closest(".ctbx-card");
+        this.cartCardData = this.actions.getElByID(this.cardData, this.ctbxCard.dataset.ctbxcardid);
+
+        this.cartBox.minusCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+        this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
+        this.cardBox.checkCardBtn(this.cartCardData, this.cartData, this.cdbxfld);
+      }
 
       if (this.target.closest(".ctbx-order-btn")) this.actions.replEl(this.orfmbx, this.cdbx);
     };

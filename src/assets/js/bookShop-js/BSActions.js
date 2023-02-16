@@ -42,7 +42,15 @@ export default class BSActions {
     return false;
   };
 
-  getElbyID(arr, id) {
+  getElByID(arr, id) {
     return arr.find((el) => el.id === id);
+  }
+
+  getIndByID(arr, id) {
+    return arr.findIndex((el) => el.id === id);
+  }
+
+  checkInkludeByID(arr, id) {
+    return arr.map((data) => data.id).includes(id);
   }
 }

@@ -4,7 +4,7 @@ export default class BSPopupBox {
     this.actions = actions;
   }
 
-  getPopupBox(popupData) {
+  getPopupBox(popupData, inCart) {
     const popupBox = this.actions.createElem("div", { class: "popup-box", id: "popupBox" });
 
     const popupImgBox = this.actions.createElem("div", { class: "popup-img-box" });
@@ -22,6 +22,7 @@ export default class BSPopupBox {
     const popupPrice = this.actions.createElem("span", { class: "heading popup-price" }, popupData.price);
     const popupSign = this.actions.createElem("span", { class: "heading popup-sign" }, "$");
     const popupAddBtn = this.actions.createElem("button", { class: "popup-add-btn", type: "button" }, "Add");
+    if (inCart) popupAddBtn.setAttribute("disabled", "disabled");
 
     this.actions.addEl(popupImgBox, popupImg);
 
@@ -34,5 +35,15 @@ export default class BSPopupBox {
     this.actions.addEl(popupBox, popupImgBox, popupContBox);
 
     return popupBox;
+  }
+
+  checkPopup(cartCardData, popupData, cartData, cardBox, popupbox) {
+    if (cardBox.contains(popupbox) && popupData.id === cartCardData.id) {
+      if (this.actions.checkInkludeByID(cartData, popupData.id)) {
+        popupbox.querySelector(".popup-add-btn").setAttribute("disabled", "disabled");
+      } else {
+        popupbox.querySelector(".popup-add-btn").removeAttribute("disabled");
+      }
+    }
   }
 }

@@ -1,5 +1,4 @@
 # ![](./src/assets/icon/readme-icon/greenvir30.png)![](./src/assets/icon/readme-icon/book.png) Books shop ![](./src/assets/icon/readme-icon/glasses.png) ![](./src/assets/icon/readme-icon/violetvir30.png)
-1. [Demo Week 1](https://DenViRus.github.io/Book-Shop/src/pages/bookShop/bookShop.html)
 1. [Demo Week 2](https://DenViRus.github.io/Book-Shop/src/pages/bookShop/bookShop.html)
 ---
 ## Task
@@ -22,7 +21,7 @@ It's **recommended** to use [normalize.css](https://necolas.github.io/normalize.
  * all tags should be created in the js code.
  * styles you should describe in the css file,but you should add css classes to created tags using JavaScript,
  * the delivery form should be implemented in the HTML file ( not thru the js code )
- 
+
 **Week_2**: Add interactive to the pages:
  * add book to the bag by click on appropriate button or by drag the image of book to the bag (drag and drop). Both options should be implemented
  * show popup with book's description by click on Show more button

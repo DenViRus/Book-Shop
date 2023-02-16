@@ -1,12 +1,13 @@
-[{
-  "author": "Douglas Crockford",
-  "src375": "./../../assets/img/bookShop-img/bookShopMain-img/books375/jsTheGoodParts375.jpg",
-  "src250": "./../../assets/img/bookShop-img/bookShopMain-img/books250/jsTheGoodParts250.jpg",
-  "src130": "./../../assets/img/bookShop-img/bookShopMain-img/books130/jsTheGoodParts130.jpg",
-  "title": "JavaScript: The Good Parts",
-  "price": 30,
-  "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
-},
+[
+  {
+    "author": "Douglas Crockford",
+    "src375": "./../../assets/img/bookShop-img/bookShopMain-img/books375/jsTheGoodParts375.jpg",
+    "src250": "./../../assets/img/bookShop-img/bookShopMain-img/books250/jsTheGoodParts250.jpg",
+    "src130": "./../../assets/img/bookShop-img/bookShopMain-img/books130/jsTheGoodParts130.jpg",
+    "title": "JavaScript: The Good Parts",
+    "price": 30,
+    "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
+  },
   {
     "author": "David Herman",
     "src375": "./../../assets/img/bookShop-img/bookShopMain-img/books375/effectiveJS375.jpg",
