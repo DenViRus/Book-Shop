@@ -1,6 +1,5 @@
 export default class BSOrderFormBox {
-  constructor(utils, actions) {
-    this.utils = utils;
+  constructor(actions) {
     this.actions = actions;
   }
 

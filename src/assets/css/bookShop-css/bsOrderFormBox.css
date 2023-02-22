@@ -1,5 +1,6 @@
 .orderForm-box {
   width: var(--orderFormBoxWidth);
+  cursor: default;
 }
 
 .orfm-head-box {

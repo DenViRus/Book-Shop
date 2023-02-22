@@ -2,6 +2,8 @@
   background: var(--bgHead);
   padding-top: 2rem;
   padding-bottom: 3rem;
+
+  cursor: default;
 }
 
 .footer-row {
@@ -34,6 +36,7 @@
   background-size: var(--footContLinkHeight) var(--footContLinkHeight);
   background-position: 0 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .footer-cont-mail-link {
@@ -76,10 +79,12 @@
 .footer-dev-logo-link {
   width: var(--footDevLinkLogoWidth);
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 .footer-dev-logo-img {
   width: 100%;
+  cursor: pointer;
 }
 
 .footer-cont-mail-link:hover,

@@ -9,22 +9,24 @@ import BSFooter from "./BSFooter.js";
 
 import BSActions from "./BSActions.js";
 import BSUtils from "./BSUtils.js";
+import BSDragAndDrop from "./BSDragAndDrop.js";
 
 const projBox = document.getElementById("projBox");
 const bsActions = new BSActions();
 const bsUtils = new BSUtils(bsActions);
+const bsDragAndDrop = new BSDragAndDrop(bsActions);
 
 const bsHeader = new BSHeader(bsUtils, bsActions);
 
-const bsCardBox = new BSCardBox(bsUtils, bsActions);
-const bsCartBox = new BSCartBox(bsUtils, bsActions);
-const bsOrderFormBox = new BSOrderFormBox(bsUtils, bsActions);
-const bsPopupBox = new BSPopupBox(bsUtils, bsActions);
-const bsMain = new BSMain(bsCardBox, bsCartBox, bsOrderFormBox, bsPopupBox, bsUtils, bsActions);
+const bsCardBox = new BSCardBox(bsActions);
+const bsCartBox = new BSCartBox(bsActions);
+const bsOrderFormBox = new BSOrderFormBox(bsActions);
+const bsPopupBox = new BSPopupBox(bsActions);
+const bsMain = new BSMain(bsCardBox, bsCartBox, bsOrderFormBox, bsPopupBox, bsUtils, bsActions, bsDragAndDrop);
 
 const bsFooter = new BSFooter(bsUtils, bsActions);
 
-const bsController = new BSController(projBox, bsHeader, bsMain, bsCardBox, bsCartBox, bsOrderFormBox, bsPopupBox, bsFooter, bsUtils, bsActions);
+const bsController = new BSController(projBox, bsHeader, bsMain, bsCardBox, bsCartBox, bsOrderFormBox, bsPopupBox, bsFooter, bsActions);
 bsController.bsControl();
 
 console.log(window.innerWidth);

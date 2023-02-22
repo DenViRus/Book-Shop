@@ -1,8 +1,10 @@
 .main {
   background-color: var(--bgMain);
   padding: 1rem 0;
+  cursor: default;
 }
 
 .main-row {
   display: flex;
+  position: relative;
 }
