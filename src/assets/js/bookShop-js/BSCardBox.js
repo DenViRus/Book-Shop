@@ -1,6 +1,5 @@
 export default class BSCardBox {
-  constructor(utils, actions) {
-    this.utils = utils;
+  constructor(actions) {
     this.actions = actions;
   }
 
@@ -24,7 +23,6 @@ export default class BSCardBox {
       const cdBxCardParag = this.actions.createElem("p", { class: "paragraph cdbx-card-parag" }, data.author);
 
       const cdBxCardPriceBox = this.actions.createElem("div", { class: "cdbx-card-price-box" });
-
       const cdBxCardPrice = this.actions.createElem("span", { class: "heading cdbx-card-price" }, data.price);
       const cdBxCardSign = this.actions.createElem("span", { class: "heading cdbx-card-sign" }, "$");
 

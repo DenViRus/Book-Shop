@@ -1,5 +1,5 @@
 export default class BSController {
-  constructor(box, header, main, cardBox, cartBox, orderFormBox, popupBox, footer, utils, actions) {
+  constructor(box, header, main, cardBox, cartBox, orderFormBox, popupBox, footer, actions) {
     this.box = box;
     this.header = header;
     this.main = main;
@@ -8,7 +8,6 @@ export default class BSController {
     this.orderFormBox = orderFormBox;
     this.popupBox = popupBox;
     this.footer = footer;
-    this.utils = utils;
     this.actions = actions;
 
     this.bsHeader = null;

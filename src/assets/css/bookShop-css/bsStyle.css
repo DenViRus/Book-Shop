@@ -125,4 +125,9 @@
   --ctbxCardBtnWidth: 3.5rem;
   --ctbxCardRemoveBtnWidth: 10rem;
   --ctbxCardRemoveBtnFZ: 1.5rem;
+
+  --dropCardWidth: 11rem;
+  --dropCardImgBoxWidth: 10rem;
+  --dropCardInfoBoxFZ: 1rem;
+  --dropCardPriceBoxFZ: 1.5rem;
 }

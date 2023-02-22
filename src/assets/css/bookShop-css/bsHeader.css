@@ -1,6 +1,7 @@
 .header {
   background: var(--bgHead);
   padding: 1rem 0;
+  cursor: default;
 }
 
 .header-row {
@@ -37,6 +38,7 @@
   color: var(--colorSilver);
   font-size: var(--headNavFZ);
   font-weight: 600;
+  cursor: pointer;
 }
 
 .header-nav-link:hover {
