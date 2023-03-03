@@ -21,7 +21,7 @@ export default class BSPopupBox {
     const popupPrice = this.actions.createElem("span", { class: "heading popup-price" }, popupData.price);
     const popupSign = this.actions.createElem("span", { class: "heading popup-sign" }, "$");
     const popupAddBtn = this.actions.createElem("button", { class: "popup-add-btn", type: "button" }, "Add");
-    if (inCart) popupAddBtn.setAttribute("disabled", "disabled");
+    if (inCart) popupAddBtn.setAttribute("disabled", "");
 
     this.actions.addEl(popupImgBox, popupImg);
 
@@ -39,7 +39,7 @@ export default class BSPopupBox {
   checkPopup(cartCardData, popupData, cartData, cardBox, popupbox) {
     if (cardBox.contains(popupbox) && popupData.id === cartCardData.id) {
       if (this.actions.checkInkludeByID(cartData, popupData.id)) {
-        popupbox.querySelector(".popup-add-btn").setAttribute("disabled", "disabled");
+        popupbox.querySelector(".popup-add-btn").setAttribute("disabled", "");
       } else {
         popupbox.querySelector(".popup-add-btn").removeAttribute("disabled");
       }

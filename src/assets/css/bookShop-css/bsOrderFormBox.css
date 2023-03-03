@@ -22,9 +22,7 @@
   background-size: 2.5rem 2rem;
   background-position: 5% 50%;
   background-repeat: no-repeat;
-
   font-weight: 600;
-
   text-align: right;
   padding: 0.3rem 0.6rem;
   border: 0.1rem solid var(--colorSilver);
@@ -130,6 +128,8 @@
 .orfm-dateData-lbl {
   flex-direction: column;
   width: 45%;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .orfm-payData-lbl,
@@ -247,6 +247,14 @@
   color: var(--colorGold);
 }
 
+.orfm-inp:disabled + .orfm-checkSign {
+  border-color: var(--colorBlack);
+}
+
+.orfm-inp:disabled ~ .orfm-span {
+  color: var(--colorBlack);
+}
+
 .orfm-btn-box {
   text-align: center;
 }
@@ -271,4 +279,36 @@
   background-color: var(--colorGreen);
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/handsGold.png);
   border-color: var(--colorGold);
+}
+
+.orfm-sub-btn:disabled {
+  background: var(--colorGrey);
+  color: var(--colorSilver);
+  border-color: var(--colorSilver);
+}
+
+.noValid {
+  color: var(--colorRed);
+  border-color: var(--colorRed);
+}
+
+.valid {
+  color: var(--colorGreen);
+  border-color: var(--colorGold);
+}
+
+.valid-head {
+  color: var(--colorGold);
+}
+
+.noValid-head {
+  color: var(--colorRed);
+}
+
+.er-mes {
+  font-size: var(--errorMesageFZ);
+  color: var(--colorRed);
+  position: absolute;
+  bottom: -2.5rem;
+  left: 1rem;
 }

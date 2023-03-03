@@ -54,7 +54,7 @@ export default class BSCardBox {
 
   checkCardBtn(cartCardData, cartData, cdbxField) {
     if (this.actions.checkInkludeByID(cartData, cartCardData.id)) {
-      cdbxField.querySelector(`#${cartCardData.id}`).querySelector(".cdbx-card-add-btn").setAttribute("disabled", "disabled");
+      cdbxField.querySelector(`#${cartCardData.id}`).querySelector(".cdbx-card-add-btn").setAttribute("disabled", "");
     } else {
       cdbxField.querySelector(`#${cartCardData.id}`).querySelector(".cdbx-card-add-btn").removeAttribute("disabled");
     }

@@ -35,11 +35,11 @@ export default class BSDragAndDrop {
 
   removeAt(dropCard, dragCard, dropEls, noDropEls) {
     for (const noDropEl of noDropEls) {
-      noDropEl.style.cursor = "";
+      noDropEl.classList.remove("no-droppable");
     }
 
     for (const dropEl of dropEls) {
-      dropEl.style.cursor = "";
+      dropEl.classList.remove("droppable");
     }
 
     dragCard.classList.remove("drag-card");
@@ -48,14 +48,12 @@ export default class BSDragAndDrop {
 
   startDrag(mainRow, dropCard, dragCard, shiftX, shiftY, dropEls, noDropEls) {
     for (const noDropEl of noDropEls) {
-      noDropEl.style.cursor = "grabbing";
+      noDropEl.classList.add("no-droppable");
     }
 
     for (const dropEl of dropEls) {
-      dropEl.style.cursor = "cell";
+      dropEl.classList.add("droppable");
     }
-
-    mainRow.style.cursor = "grabbing";
 
     dragCard.classList.add("drag-card");
     this.actions.prepEl(mainRow, dropCard);
@@ -68,10 +66,15 @@ export default class BSDragAndDrop {
   }
 
   finishDrag(dropCard, dragCard, dropEls, noDropEls, clientX, clientY) {
-    this.removeAt(dropCard, dragCard, dropEls, noDropEls);
-
+    let result = null;
     const el = document.elementFromPoint(clientX, clientY).closest(".ctbx-card-field");
 
-    return el && el.classList.contains("ctbx-card-field") ? true : false;
+    if (dragCard.classList.contains("cdbx-card")) result = el ? true : false;
+
+    if (dragCard.classList.contains("ctbx-card")) result = !el ? true : false;
+
+    this.removeAt(dropCard, dragCard, dropEls, noDropEls);
+
+    return result;
   }
 }

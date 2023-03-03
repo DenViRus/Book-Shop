@@ -168,6 +168,6 @@
 
 .cdbx-card-add-btn:disabled {
   background: var(--colorGrey);
-  color: var(--colorGrey);
-  border-color: var(--colorBlack);
+  color: var(--colorSilver);
+  border-color: var(--colorSilver);
 }
