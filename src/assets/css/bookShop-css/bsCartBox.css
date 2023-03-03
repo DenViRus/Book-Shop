@@ -9,6 +9,7 @@
   top: 5.5rem;
   display: flex;
   flex-direction: column;
+  cursor: grab;
 }
 
 .ctbx-head-box {
@@ -97,10 +98,8 @@
   background-color: var(--boxheadBG);
   padding: 0.5rem;
   border-radius: 0 0 1rem 1rem;
-
   display: flex;
   align-items: flex-end;
-
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -111,13 +110,11 @@
   font-size: var(--ctbxOrderBtnFZ);
   font-weight: 600;
   color: var(--colorSilver);
-
   background-color: var(--colorBlue);
   background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/orderCartSilver.png);
   background-size: 3.5rem 3rem;
   background-position: 95% 50%;
   background-repeat: no-repeat;
-
   padding: 1rem;
   border: 0.25rem solid var(--colorSilver);
   border-radius: 0.5rem;
@@ -223,9 +220,7 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-
   background-color: var(--boxheadBG);
-
   width: 100%;
   padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   border-radius: 1rem;

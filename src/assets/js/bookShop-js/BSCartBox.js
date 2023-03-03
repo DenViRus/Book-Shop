@@ -81,7 +81,6 @@ export default class BSCartBox {
       const statBoxEl = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
       this.actions.addEl(ctBxCardStatBox, statBoxEl);
     }
-
     const ctBxCardActBox = this.actions.createElem("div", { class: "ctbx-card-act-box" });
     const ctBxCardActData = [
       {
@@ -130,7 +129,7 @@ export default class BSCartBox {
   addCartCard(target, cartCardData, cartData, cartField, ctBxTotalprice, ctbxBtnBox) {
     cartData.push(cartCardData);
     this.actions.addEl(cartField, this.getCartBoxCard(cartCardData));
-    target.setAttribute("disabled", "disabled");
+    target.setAttribute("disabled", "");
     this.checkCart(cartData, cartField, ctBxTotalprice, ctbxBtnBox);
   }
 

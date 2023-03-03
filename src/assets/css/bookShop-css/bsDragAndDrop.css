@@ -1,3 +1,11 @@
+.no-droppable {
+  cursor: grabbing;
+}
+
+.droppable {
+  cursor: cell;
+}
+
 .drag-card {
   filter: grayscale(100%);
   opacity: 0.5;

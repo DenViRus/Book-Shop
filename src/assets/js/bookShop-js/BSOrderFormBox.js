@@ -14,7 +14,7 @@ export default class BSOrderFormBox {
     const orfmForm = this.actions.createElem("form", { class: "orfm-form", id: "orfmForm" });
 
     const orfmBtnBox = this.actions.createElem("div", { class: "orfm-box orfm-btn-box" });
-    const orfmSubBtn = this.actions.createElem("button", { class: "orfm-sub-btn", type: "submit", id: "orfmSubBtn" }, "Complete Order");
+    const orfmSubBtn = this.actions.createElem("button", { class: "orfm-sub-btn", type: "submit", disabled: "", id: "orfmSubBtn" }, "Complete Order");
 
     const orfmPersDataBox = this.actions.createElem("div", { class: "orfm-box orfm-persData-box" });
     const orfmPersDataFld = this.actions.createElem("fieldset", { class: "orfm-fld orfm-persData-fld" });
@@ -54,7 +54,7 @@ export default class BSOrderFormBox {
             id: "orfmPersDataNameInp",
             autocomplete: "off",
             minlength: "4",
-            maxlength: "12",
+            maxlength: "20",
           },
           tagCont: "",
         },
@@ -75,7 +75,7 @@ export default class BSOrderFormBox {
           tagAttr: {
             class: "paragraph orfm-span orfm-persData-span",
           },
-          tagCont: "Name:",
+          tagCont: "Surname:",
         },
 
         {
@@ -87,7 +87,7 @@ export default class BSOrderFormBox {
             id: "orfmPersDataSurnameInp",
             autocomplete: "off",
             minlength: "5",
-            maxlength: "15",
+            maxlength: "25",
           },
           tagCont: "",
         },
@@ -119,7 +119,7 @@ export default class BSOrderFormBox {
             name: "orfmPersDataPhone",
             id: "orfmPersDataPhoneInp",
             autocomplete: "off",
-            minlength: "5",
+            minlength: "10",
             maxlength: "15",
           },
           tagCont: "",
@@ -153,7 +153,7 @@ export default class BSOrderFormBox {
             id: "orfmPersDataEmaleInp",
             autocomplete: "off",
             minlength: "5",
-            maxlength: "15",
+            maxlength: "25",
           },
           tagCont: "",
         },
@@ -221,7 +221,7 @@ export default class BSOrderFormBox {
           tagName: "label",
           tagAttr: {
             class: "orfm-lbl orfm-addrData-lbl",
-            for: "orfmAddrDataСityInp",
+            for: "orfmAddrDataCityInp",
           },
           tagCont: "",
         },
@@ -231,7 +231,7 @@ export default class BSOrderFormBox {
           tagAttr: {
             class: "paragraph orfm-span orfm-addrData-span",
           },
-          tagCont: "Сity:",
+          tagCont: "City:",
         },
 
         {
@@ -239,8 +239,8 @@ export default class BSOrderFormBox {
           tagAttr: {
             class: "orfm-inp orfm-addrData-city-inp",
             type: "text",
-            name: "orfmAddrDataСity",
-            id: "orfmAddrDataСityInp",
+            name: "orfmAddrDataCity",
+            id: "orfmAddrDataCityInp",
             autocomplete: "off",
             minlength: "3",
             maxlength: "20",
@@ -360,7 +360,6 @@ export default class BSOrderFormBox {
         this.actions.addEl(orfmAddrDataFld, dataItem);
       }
     }
-
     const orfmDateDataBox = this.actions.createElem("div", { class: "orfm-box orfm-dateData-box" });
     const orfmDateDataFld = this.actions.createElem("fieldset", { class: "orfm-fld orfm-dateData-fld" });
     const orfmDateData = [
@@ -396,10 +395,8 @@ export default class BSOrderFormBox {
             class: "orfm-inp orfm-dateData-date-inp",
             type: "date",
             name: "orfmDateDataDate",
+            min: this.getTomorrowDate(),
             id: "orfmDateDataDateInp",
-            autocomplete: "off",
-            minlength: "3",
-            maxlength: "20",
           },
           tagCont: "",
         },
@@ -417,7 +414,6 @@ export default class BSOrderFormBox {
         this.actions.addEl(orfmDateDataFld, dataItem);
       }
     }
-
     const orfmPayDataBox = this.actions.createElem("div", { class: "orfm-box orfm-payData-box" });
     const orfmPayDataFld = this.actions.createElem("fieldset", { class: "orfm-fld orfm-payData-fld" });
     const orfmPayData = [
@@ -443,7 +439,7 @@ export default class BSOrderFormBox {
           tagAttr: {
             class: "paragraph orfm-span orfm-payData-span",
           },
-          tagCont: "Cash:",
+          tagCont: "Cash",
         },
 
         {
@@ -462,6 +458,7 @@ export default class BSOrderFormBox {
             name: "orfmPayData",
             value: "cash",
             id: "orfmPayDataCashInp",
+            checked: "",
           },
           tagCont: "",
         },
@@ -481,7 +478,7 @@ export default class BSOrderFormBox {
           tagAttr: {
             class: "paragraph orfm-span orfm-payData-span",
           },
-          tagCont: "Card:",
+          tagCont: "Card",
         },
 
         {
@@ -518,7 +515,6 @@ export default class BSOrderFormBox {
         this.actions.addEl(orfmPayDataFld, dataItem);
       }
     }
-
     const orfmGiftDataBox = this.actions.createElem("div", { class: "orfm-box orfm-giftData-box" });
     const orfmGiftDataFld = this.actions.createElem("fieldset", { class: "orfm-fld orfm-giftData-fld" });
     const orfmGiftData = [
@@ -715,5 +711,185 @@ export default class BSOrderFormBox {
     this.actions.addEl(orderFormBox, orfmHeadBox, orfmForm);
 
     return orderFormBox;
+  }
+
+  getTomorrowDate() {
+    const today = new Date();
+    const needDay = today.getDate() + 1 < 10 ? `0${today.getDate() + 1}` : today.getDate() + 1;
+    const needMonth = today.getMonth() + 1 < 10 ? `0${today.getMonth() + 1}` : today.getMonth() + 1;
+    const needYear = today.getFullYear();
+    return `${needYear}-${needMonth}-${needDay}`;
+  }
+
+  getErMes(box, mes) {
+    this.actions.addEl(box, this.actions.createElem("span", { class: "paragraph er-mes" }, mes));
+  }
+
+  remErMes(box) {
+    box.querySelector(".er-mes").remove();
+  }
+
+  makeValid(el) {
+    el.classList.add("valid");
+  }
+
+  makeValidHead(box) {
+    box.querySelector(".orfm-span").classList.add("valid-head");
+  }
+
+  makeNoValid(el) {
+    el.classList.add("noValid");
+  }
+
+  makeNoValidHead(box) {
+    box.querySelector(".orfm-span").classList.add("noValid-head");
+  }
+
+  remValidation(el, box) {
+    if (el.classList.contains("noValid")) {
+      el.classList.remove("noValid");
+      box.querySelector(".orfm-span").classList.remove("noValid-head");
+      this.remErMes(box);
+    }
+    if (el.classList.contains("valid")) {
+      el.classList.remove("valid");
+      box.querySelector(".orfm-span").classList.remove("valid-head");
+    }
+  }
+
+  checkOrfmName(el, box) {
+    this.remValidation(el, box);
+    if (/[^а-яА-ЯёЁa-zA-Z]+/g.test(el.value) || el.value.length < 4) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 4 letters, without numbers and spaces!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmSurname(el, box) {
+    this.remValidation(el, box);
+    if (/[^а-яА-ЯёЁa-zA-Z]+/g.test(el.value) || el.value.length < 5) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 5 letters, without numbers and spaces!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmPhone(el, box) {
+    this.remValidation(el, box);
+    if (/[^0-9]+/g.test(el.value) || el.value.length < 10) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 10 letters, without letters and spaces!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmEmale(el, box) {
+    this.remValidation(el, box);
+    if (!/[a-zA-Z0-9.-_]+@[a-zA-Z]+.[a-zA-Z]+/g.test(el.value) || el.value.length < 5) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 5 letters and numbers, symbol @ is required!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmCountry(el, box) {
+    this.remValidation(el, box);
+    if (/[^а-яА-ЯёЁa-zA-Z -]+/g.test(el.value) || el.value.length < 3) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 3 letters, without numbers!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmCity(el, box) {
+    this.remValidation(el, box);
+    if (/[^а-яА-ЯёЁa-zA-Z -]+/g.test(el.value) || el.value.length < 3) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 3 letters, without numbers!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmStreet(el, box) {
+    this.remValidation(el, box);
+    if (/[^а-яА-ЯёЁa-zA-Z0-9 -]+/g.test(el.value) || el.value.length < 5) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 5 letters and numbers!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmHouse(el, box) {
+    this.remValidation(el, box);
+    if (!/^[1-9]+[0-9]*$/g.test(el.value) || el.value.length < 1) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 1 number, without letters and spaces!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmFlat(el, box) {
+    this.remValidation(el, box);
+    if (!/^[1-9]+[-0-9]*$/g.test(el.value) || el.value.length < 1) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Not less than 1 number, without letters and spaces!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmDate(el, box) {
+    this.remValidation(el, box);
+    if (new Date(el.min) > new Date(el.value) || el.value.length < 1) {
+      this.makeNoValid(el);
+      this.makeNoValidHead(box);
+      this.getErMes(box, "Сhoose the date not earlier than tomorrow!");
+    } else {
+      this.makeValid(el);
+      this.makeValidHead(box);
+    }
+  }
+
+  checkOrfmGift(box) {
+    if ([...box.querySelectorAll(".orfm-inp")].filter((gift) => gift.checked).length > 1) {
+      [...box.querySelectorAll(".orfm-inp")].filter((noGift) => noGift.checked === false).forEach((noGift) => noGift.setAttribute("disabled", ""));
+    } else {
+      [...box.querySelectorAll(".orfm-inp")].filter((noGift) => noGift.checked === false).forEach((noGift) => noGift.removeAttribute("disabled"));
+    }
+  }
+
+  checkOrfmSubBtn(cartData, validInps, orfmSubBtn) {
+    if (cartData.length > 0 && validInps.every((el) => el.classList.contains("valid"))) {
+      orfmSubBtn.removeAttribute("disabled");
+    } else {
+      orfmSubBtn.setAttribute("disabled", "");
+    }
   }
 }
