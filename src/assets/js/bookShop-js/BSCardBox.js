@@ -32,23 +32,16 @@ export default class BSCardBox {
       const cdBxCardAddBtn = this.actions.createElem("button", { class: "cdbx-card-add-btn", type: "button" }, "Add");
 
       this.actions.addEl(cdBxCardImgBox, cdBxCardImg);
-
       this.actions.addEl(cdBxCardPriceBox, cdBxCardPrice, cdBxCardSign);
-
       this.actions.addEl(cdBxCardInfoBox, cdBxCardHead, cdBxCardParag);
-
       this.actions.addEl(cdBxCardBtnBox, cdBxCardShowBtn, cdBxCardAddBtn);
-
       this.actions.addEl(cdBxCard, cdBxCardImgBox, cdBxCardInfoBox, cdBxCardPriceBox, cdBxCardBtnBox);
-
       this.actions.addEl(cdBxCardField, cdBxCard);
     }
 
     this.actions.addEl(cdBxHeadBox, cdBxHead, cdBxHeadImg);
     this.actions.addEl(cdBxHeadBox, cdBxHead, cdBxHeadImg);
-
     this.actions.addEl(cardBox, cdBxHeadBox, cdBxCardField);
-
     return cardBox;
   }
 

@@ -18,11 +18,8 @@ export default class BSDragAndDrop {
     const dropCardSign = this.actions.createElem("span", { class: "heading drop-card-sign" }, "$");
 
     this.actions.addEl(dropCardImgBox, dropCardImg);
-
     this.actions.addEl(dropCardInfoBox, dropCardHead, dropCardParag);
-
     this.actions.addEl(dropCardPriceBox, dropCardPrice, dropCardSign);
-
     this.actions.addEl(dropCard, dropCardImgBox, dropCardInfoBox, dropCardPriceBox);
 
     return dropCard;
@@ -68,13 +65,9 @@ export default class BSDragAndDrop {
   finishDrag(dropCard, dragCard, dropEls, noDropEls, clientX, clientY) {
     let result = null;
     const el = document.elementFromPoint(clientX, clientY).closest(".ctbx-card-field");
-
     if (dragCard.classList.contains("cdbx-card")) result = el ? true : false;
-
     if (dragCard.classList.contains("ctbx-card")) result = !el ? true : false;
-
     this.removeAt(dropCard, dragCard, dropEls, noDropEls);
-
     return result;
   }
 }

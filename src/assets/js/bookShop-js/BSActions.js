@@ -29,6 +29,14 @@ export default class BSActions {
     el2.replaceWith(el1);
   }
 
+  beforEl(el, ...prevEls) {
+    el.before(...prevEls);
+  }
+
+  afterEl(el, ...nextEls) {
+    el.after(...nextEls);
+  }
+
   getDataReq = async (url, id) => {
     const resp = await fetch(url);
     if (resp.status >= 200 && resp.status < 300) {

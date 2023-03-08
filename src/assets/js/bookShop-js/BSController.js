@@ -1,12 +1,8 @@
 export default class BSController {
-  constructor(box, header, main, cardBox, cartBox, orderFormBox, popupBox, footer, actions) {
+  constructor(box, header, main, footer, actions) {
     this.box = box;
     this.header = header;
     this.main = main;
-    this.cardBox = cardBox;
-    this.cartBox = cartBox;
-    this.orderFormBox = orderFormBox;
-    this.popupBox = popupBox;
     this.footer = footer;
     this.actions = actions;
 
@@ -25,7 +21,6 @@ export default class BSController {
 
   async bsControl() {
     await this.bsStart();
-
     this.main.mainControl();
   }
 }

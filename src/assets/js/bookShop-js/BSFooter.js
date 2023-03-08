@@ -36,15 +36,10 @@ export default class BSFooter {
     }
 
     this.actions.addEl(footerImgBox, footerImg);
-
     this.actions.addEl(footerDevLogoLink, footerDevLogoImg);
-
     this.actions.addEl(footerDevBox, footerDevHubtLink, footerDevLogoLink);
-
     this.actions.addEl(footerRow, footerContBox, footerImgBox, footerDevBox);
-
     this.actions.addEl(footer, footerRow);
-
     return footer;
   }
 }

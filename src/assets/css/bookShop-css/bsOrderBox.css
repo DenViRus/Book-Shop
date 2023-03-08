@@ -1,0 +1,231 @@
+.open-order {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
+}
+
+.order-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: var(--bgOrdBox);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-cont {
+  width: var(--orderContWidth);
+  background-color: var(--boxheadBG);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.ord-box:nth-child(n + 2) {
+  margin-top: 1rem;
+}
+
+.ord-fld {
+  border: 0.2rem solid var(--colorSilver);
+  display: flex;
+  justify-content: center;
+}
+
+.ord-head-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ord-head {
+  color: var(--colorSilver);
+  font-size: var(--boxHeadFZ);
+  font-weight: 600;
+}
+
+.ord-head-img1,
+.ord-head-img2 {
+  width: var(--boxImgWidth);
+  height: var(--boxImgHeight);
+  background-size: 90% 90%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0.15rem solid var(--colorGold);
+  border-radius: 1rem;
+}
+
+.ord-head-img1 {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/fingerUpGold.png);
+  margin-left: 1rem;
+}
+
+.ord-head-img2 {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/fingerUpGold.png);
+  transform: rotateY(180deg);
+  margin-right: 1rem;
+}
+
+.ord-btn-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ord-btn {
+  width: var(--ordBtnWidth);
+  font-size: var(--ordBtnFZ);
+  font-weight: 600;
+  color: var(--colorSilver);
+  background-color: var(--colorBlue);
+  background-size: 4rem 3.5rem;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border: 0.25rem solid var(--colorSilver);
+  border-radius: 1rem;
+}
+
+.ord-ret-btn {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/deliverySilver.png);
+  background-position: 5% 50%;
+}
+
+.ord-sub-btn {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/fingerUpSilver.png);
+  background-position: 95% 50%;
+}
+
+.ord-order-fld {
+  justify-content: space-between;
+}
+
+.ord-lgd {
+  font-size: var(--ordLgdFZ);
+  color: var(--colorSilver);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.ord-ord-box {
+  display: flex;
+  width: var(--ordOrdBoxWidth);
+  max-height: var(--ordOrdBoxHeight);
+  flex-direction: column;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+.ord-ord-box::-webkit-scrollbar {
+  width: 0;
+}
+
+.ord-data-head {
+  color: var(--colorGold);
+  font-size: var(--ordHeadFZ);
+  margin-top: 0.5rem;
+}
+
+.ord-ord-total {
+  width: var(--ordOrdTotalWidth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ord-ord-total-text {
+  color: var(--colorSilver);
+  font-size: var(--ordOrdTotalFZ);
+}
+
+.ord-ord-total-price {
+  font-size: var(--ordOrdTotalFZ);
+  color: var(--colorGold);
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.ord-ord-total-sign {
+  color: var(--colorGreen);
+  font-size: var(--ordOrdTotalFZ);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.ord-btn:hover {
+  color: var(--colorGold);
+  background-color: var(--colorGreen);
+  border-color: var(--colorGold);
+}
+
+.ord-ret-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/deliveryGold.png);
+}
+
+.ord-sub-btn:hover {
+  background-image: url(./../../icon/bookShop-icon/bookShop-main-icon/fingerUpGold.png);
+}
+
+/* order card start*/
+
+.order-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ord-card-num-box,
+.ord-card-img-box,
+.ord-card-inf-box {
+  margin-left: 1rem;
+}
+
+.ord-card-num {
+  font-size: var(--ordCardHeadFZ);
+  color: var(--colorGold);
+  font-weight: 600;
+}
+
+.ord-card-img-box {
+  width: var(--ordCardImgBoxWidth);
+}
+
+.ord-card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.ord-card-head {
+  font-size: var(--ordCardHeadFZ);
+  color: var(--colorGold);
+}
+
+.ord-card-parag {
+  font-size: var(--ordCardParagFZ);
+  color: var(--colorSilver);
+}
+
+.ord-card-count {
+  font-size: var(--ordCardHeadFZ);
+  color: var(--colorGold);
+}
+
+.ord-card-x {
+  font-size: var(--ordCardParagFZ);
+  color: var(--colorWhite);
+  margin: 0 0.5rem;
+}
+
+.ord-card-price {
+  font-size: var(--ordCardHeadFZ);
+  color: var(--colorGold);
+}
+
+.ord-card-sign {
+  font-size: var(--ordCardHeadFZ);
+  color: var(--colorGreen);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}

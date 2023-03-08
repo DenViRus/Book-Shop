@@ -24,15 +24,10 @@ export default class BSPopupBox {
     if (inCart) popupAddBtn.setAttribute("disabled", "");
 
     this.actions.addEl(popupImgBox, popupImg);
-
     this.actions.addEl(popupInfoBox, popupHead, popupParagAuth, popupParagDesc);
-
     this.actions.addEl(popupActBox, popupPrice, popupSign, popupAddBtn);
-
     this.actions.addEl(popupContBox, popupClsBtn, popupInfoBox, popupActBox);
-
     this.actions.addEl(popupBox, popupImgBox, popupContBox);
-
     return popupBox;
   }
 
