@@ -132,4 +132,28 @@
   --dropCardPriceBoxFZ: 1.5rem;
 
   --errorMesageFZ: 1.5rem;
+
+  --bgOrdBox: rgb(230, 184, 115, 0.7);
+
+  --orderContWidth: 70%;
+
+  --ordLgdFZ: 2.7rem;
+
+  --ordHeadFZ: 2.3rem;
+
+  --ordOrdBoxWidth: 75%;
+  --ordOrdBoxHeight: 15rem;
+
+  --ordOrdTotalWidth: 23%;
+
+  --ordOrdTotalFZ: 4rem;
+
+  --ordBtnWidth: 45%;
+
+  --ordBtnFZ: 3rem;
+
+  --ordCardImgBoxWidth: 5rem;
+
+  --ordCardHeadFZ: 1.7rem;
+  --ordCardParagFZ: 1.5rem;
 }

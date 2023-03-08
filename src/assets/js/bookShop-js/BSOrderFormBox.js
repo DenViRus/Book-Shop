@@ -636,7 +636,7 @@ export default class BSOrderFormBox {
             class: "orfm-inp orfm-giftData-disc-inp",
             type: "checkbox",
             name: "orfmGiftData",
-            value: "provide 2% discount to the next time",
+            value: "Provide 2% discount to the next time",
             id: "orfmGiftDataDiscInp",
           },
           tagCont: "",
@@ -786,7 +786,7 @@ export default class BSOrderFormBox {
     if (/[^0-9]+/g.test(el.value) || el.value.length < 10) {
       this.makeNoValid(el);
       this.makeNoValidHead(box);
-      this.getErMes(box, "Not less than 10 letters, without letters and spaces!");
+      this.getErMes(box, "Not less than 10 numbers, without letters and spaces!");
     } else {
       this.makeValid(el);
       this.makeValidHead(box);

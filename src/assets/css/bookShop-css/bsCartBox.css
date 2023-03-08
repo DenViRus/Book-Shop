@@ -54,6 +54,10 @@
   overflow: auto;
 }
 
+.ctbx-card-field::-webkit-scrollbar {
+  width: 0;
+}
+
 .empty-field::before {
   content: "Your cart is empty!";
   font-size: var(--ctbxEmptyFieldFZ);
@@ -188,7 +192,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-top: 1rem;
 }
 

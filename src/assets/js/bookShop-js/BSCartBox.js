@@ -13,8 +13,8 @@ export default class BSCartBox {
     const ctbxCardField = this.actions.createElem("div", { class: "ctbx-card-field", id: "ctbxCardField" });
 
     const ctBxTotal = this.actions.createElem("div", { class: "ctbx-total" });
-    const ctBxTotaltext = this.actions.createElem("span", { class: "paragraph ctbx-total-text" }, "Total:");
-    const ctBxTotalprice = this.actions.createElem("span", { class: "heading ctbx-total-price" }, "");
+    const ctBxTotalText = this.actions.createElem("span", { class: "paragraph ctbx-total-text" }, "Total:");
+    const ctBxTotalPrice = this.actions.createElem("span", { class: "heading ctbx-total-price" }, "");
     const ctBxTotalSign = this.actions.createElem("span", { class: "heading ctbx-total-sign" }, "$");
 
     const ctBxBtnBox = this.actions.createElem("div", { class: "ctbx-btn-box" });
@@ -22,11 +22,8 @@ export default class BSCartBox {
     const ctBxOrderBtn = this.actions.createElem("button", { class: "ctbx-order-btn", type: "button", id: "ctBxOrderBtn" }, "Confirm Order");
 
     this.actions.addEl(ctBxHeadBox, ctBxHead, ctBxHeadImg);
-
-    this.actions.addEl(ctBxTotal, ctBxTotaltext, ctBxTotalprice, ctBxTotalSign);
-
+    this.actions.addEl(ctBxTotal, ctBxTotalText, ctBxTotalPrice, ctBxTotalSign);
     this.actions.addEl(ctBxBtnBox, ctBxOrderBtn);
-
     this.actions.addEl(cartBox, ctBxHeadBox, ctbxCardField, ctBxTotal, ctBxBtnBox);
 
     return cartBox;
@@ -114,15 +111,10 @@ export default class BSCartBox {
       const actBoxEl = this.actions.createElem(data.tagName, data.tagAttr, data.tagCont);
       this.actions.addEl(ctBxCardActBox, actBoxEl);
     }
-
     this.actions.addEl(ctBxCardImgBox, ctBxCardImg);
-
     this.actions.addEl(ctBxCardInfoBox, ctBxCardHead, ctBxCardParag, ctBxCardStatBox);
-
     this.actions.addEl(ctBxCardContBox, ctBxCardImgBox, ctBxCardInfoBox);
-
     this.actions.addEl(ctBxCard, ctBxCardContBox, ctBxCardActBox);
-
     return ctBxCard;
   }
 

@@ -1,10 +1,10 @@
 export default class BSMain {
-  constructor(cardBox, cartBox, orderFormBox, popupBox, utils, actions, dragAndDrop) {
+  constructor(cardBox, cartBox, orderFormBox, orderBox, popupBox, utils, actions, dragAndDrop) {
     this.cardBox = cardBox;
     this.cartBox = cartBox;
     this.orderFormBox = orderFormBox;
+    this.orderBox = orderBox;
     this.popupBox = popupBox;
-
     this.utils = utils;
     this.actions = actions;
     this.dragAndDrop = dragAndDrop;
@@ -21,7 +21,6 @@ export default class BSMain {
 
     this.cdbx = null;
     this.cdbxfld = null;
-    this.cdbxCard = null;
 
     this.ctbx = null;
     this.ctbxfld = null;
@@ -33,6 +32,8 @@ export default class BSMain {
     this.orfm = null;
     this.validInps = null;
     this.orfmSubBtn = null;
+
+    this.ordbx = null;
 
     this.pppbx = null;
 
@@ -76,6 +77,32 @@ export default class BSMain {
     this.actions.addEl(this.main, this.mainRow);
 
     return this.main;
+  }
+
+  restart(cartData) {
+    for (const data of cartData) {
+      [...this.ctbxfld.querySelectorAll(".ctbx-card")].find((el) => el.dataset.ctbxcardid === data.id).remove();
+      this.cdbxfld.querySelector(`#${data.id}`).querySelector(".cdbx-card-add-btn").removeAttribute("disabled");
+    }
+    this.cartData = [];
+    this.cartBox.checkCart(this.cartData, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
+    if (this.cdbx.contains(this.pppbx)) this.pppbx.remove();
+    this.ordbx.remove();
+    this.actions.replEl(this.cdbx, this.orfmbx);
+    this.orfm.reset();
+    for (const inp of this.validInps) {
+      this.orderFormBox.remValidation(inp, inp.closest(".orfm-lbl"));
+    }
+    this.orderFormBox.checkOrfmGift(this.orfm.querySelector(".orfm-giftData-fld"));
+    this.orderFormBox.checkOrfmSubBtn(this.cartData, this.validInps, this.orfmSubBtn);
+    this.main.closest("body").classList.remove("open-order");
+    this.cartCardData = null;
+    this.popupData = null;
+    this.ctbxCard = null;
+    this.dragCard = null;
+    this.dropCardData = null;
+    this.dropCard = null;
+    this.drop = null;
   }
 
   mainControl() {
@@ -137,14 +164,12 @@ export default class BSMain {
       if (this.target.closest(".ctbx-card-plus-btn")) {
         this.ctbxCard = this.target.closest(".ctbx-card");
         this.cartCardData = this.actions.getElByID(this.cardData, this.ctbxCard.dataset.ctbxcardid);
-
         this.cartBox.plusCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
       }
 
       if (this.target.closest(".ctbx-card-minus-btn")) {
         this.ctbxCard = this.target.closest(".ctbx-card");
         this.cartCardData = this.actions.getElByID(this.cardData, this.ctbxCard.dataset.ctbxcardid);
-
         this.cartBox.minusCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
         this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
         this.cardBox.checkCardBtn(this.cartCardData, this.cartData, this.cdbxfld);
@@ -163,33 +188,25 @@ export default class BSMain {
 
       if (this.target.closest(".cdbx-card") && !this.target.closest(".cdbx-card-btn-box")) {
         event.preventDefault();
-
         this.dragCard = this.target.closest(".cdbx-card");
         this.dropCardData = this.actions.getElByID(this.cardData, this.dragCard.id);
         this.dropCard = this.dragAndDrop.getDropCard(this.dropCardData);
-
         this.shiftX = event.pageX - (this.mainRow.getBoundingClientRect().left + window.pageXOffset);
         this.shiftY = event.pageY - (this.mainRow.getBoundingClientRect().top + window.pageYOffset);
-
         this.dropEls = [this.ctbxfld];
         this.noDropEls = [this.mainRow, ...this.cdbxfld.querySelectorAll(".cdbx-card")];
-
         this.dragAndDrop.startDrag(this.mainRow, this.dropCard, this.dragCard, this.shiftX, this.shiftY, this.dropEls, this.noDropEls);
       }
 
       if (this.target.closest(".ctbx-card") && !this.target.closest(".ctbx-card-act-box")) {
         event.preventDefault();
-
         this.dragCard = this.target.closest(".ctbx-card");
         this.dropCardData = this.actions.getElByID(this.cartData, this.dragCard.dataset.ctbxcardid);
         this.dropCard = this.dragAndDrop.getDropCard(this.dropCardData);
-
         this.shiftX = event.pageX - (this.mainRow.getBoundingClientRect().left + window.pageXOffset);
         this.shiftY = event.pageY - (this.mainRow.getBoundingClientRect().top + window.pageYOffset);
-
         this.noDropEls = [this.ctbxfld];
         this.dropEls = [this.mainRow, ...this.cdbxfld.querySelectorAll(".cdbx-card")];
-
         this.dragAndDrop.startDrag(this.mainRow, this.dropCard, this.dragCard, this.shiftX, this.shiftY, this.dropEls, this.noDropEls);
       }
     };
@@ -200,10 +217,8 @@ export default class BSMain {
 
       if (this.mainRow.contains(this.dropCard)) {
         event.preventDefault();
-
         this.shiftX = event.pageX - (this.mainRow.getBoundingClientRect().left + window.pageXOffset);
         this.shiftY = event.pageY - (this.mainRow.getBoundingClientRect().top + window.pageYOffset);
-
         this.dragAndDrop.moveDrag(this.dropCard, this.shiftX, this.shiftY);
       }
     };
@@ -214,17 +229,14 @@ export default class BSMain {
 
       if (this.mainRow.contains(this.dropCard) && this.dragCard.classList.contains("cdbx-card")) {
         event.preventDefault();
-
         this.drop = this.dragAndDrop.finishDrag(this.dropCard, this.dragCard, this.dropEls, this.noDropEls, event.clientX, event.clientY);
         if (this.drop) {
           this.cartCardData = this.actions.getElByID(this.cardData, this.dropCardData.id);
-
           if (this.actions.checkInkludeByID(this.cartData, this.dropCardData.id)) {
             this.ctbxCard = [...this.ctbxfld.querySelectorAll(".ctbx-card")].find((el) => el.dataset.ctbxcardid === this.dropCardData.id);
             this.cartBox.plusCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
           } else {
             this.target = this.cdbxfld.querySelector(`#${this.cartCardData.id}`).querySelector(".cdbx-card-add-btn");
-
             this.cartBox.addCartCard(this.target, this.cartCardData, this.cartData, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
             this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
           }
@@ -235,11 +247,9 @@ export default class BSMain {
         event.preventDefault();
 
         this.drop = this.dragAndDrop.finishDrag(this.dropCard, this.dragCard, this.dropEls, this.noDropEls, event.clientX, event.clientY);
-
         if (this.drop) {
           this.cartCardData = this.actions.getElByID(this.cartData, this.dropCardData.id);
           this.ctbxCard = [...this.ctbxfld.querySelectorAll(".ctbx-card")].find((el) => el.dataset.ctbxcardid === this.dropCardData.id);
-
           this.cartBox.remCartCard(this.cartCardData, this.cartData, this.ctbxCard, this.ctbxfld, this.ctbxttlprs, this.ctbxbtnbx);
           this.popupBox.checkPopup(this.cartCardData, this.popupData, this.cartData, this.cdbx, this.pppbx);
           this.cardBox.checkCardBtn(this.cartCardData, this.cartData, this.cdbxfld);
@@ -269,7 +279,9 @@ export default class BSMain {
 
       if (this.target.closest(".orfm-sub-btn")) {
         event.preventDefault();
-        console.log(this.orfm);
+        this.ordbx = this.orderBox.getOrderBox(new FormData(this.orfm), this.cartData);
+        this.main.closest("body").classList.add("open-order");
+        this.actions.addEl(this.main, this.ordbx);
       }
 
       if (this.target.closest(".orfm-giftData-lbl")) {
@@ -357,7 +369,7 @@ export default class BSMain {
     const ordFormListener4 = (event) => {
       this.target = event.target;
 
-      if (this.target.closest(".orfm-persData-phone-inp") && this.target.value.length > 15 && event.key !== "Backspace") {
+      if (this.target.closest(".orfm-persData-phone-inp") && this.target.value.length > 15 && event.key !== "Backspace" && event.key !== "Delete") {
         event.preventDefault();
         return;
       }
@@ -368,5 +380,22 @@ export default class BSMain {
       }
     };
     this.orfmbx.addEventListener("keydown", ordFormListener4);
+
+    const orderListener1 = (event) => {
+      this.target = event.target;
+
+      if (this.target.closest(".ord-ret-btn")) {
+        event.preventDefault();
+        this.ordbx.remove();
+        this.ordbx = null;
+        this.main.closest("body").classList.remove("open-order");
+      }
+
+      if (this.target.closest(".ord-sub-btn")) {
+        event.preventDefault();
+        this.restart(this.cartData);
+      }
+    };
+    this.main.addEventListener("click", orderListener1);
   }
 }
