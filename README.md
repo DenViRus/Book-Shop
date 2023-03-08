@@ -1,5 +1,5 @@
 # ![](./src/pic/greenvir30.png)![](./src/pic/book.png) Books shop ![](./src/pic/glasses.png) ![](./src/pic/violetvir30.png)
-1. [Demo Week 1]()
+1. [Demo](https://DenViRus.github.io/Book-Shop/src/pages/bookShop/bookShop.html)
 ---
 ## Task
 The books shop owner asked you to create the online shop to buy book with delivery to user's home. He wants the user to be able to look through the books' catalog, see the description of a particular book, add a book to the bag, choose the appropriate date and address to deliver.
